@@ -581,27 +581,27 @@
     },
     {
       "path": "docs/116-release-0-2-1.en.md",
-      "bytes": 3712,
+      "bytes": 3842,
       "mode": "0644",
-      "sha256": "520925e30189802a95d1da1877cabd10a1044e771eceecb61293db5fe876d759"
+      "sha256": "ecc270de52806958a69b1e890b089a4891bebfb86b5250b6126ca7acf130485f"
     },
     {
       "path": "docs/116-release-0-2-1.pl.md",
-      "bytes": 3897,
+      "bytes": 4059,
       "mode": "0644",
-      "sha256": "d8a93657b8ba3d8f69f8e220a028693433c571f22392e42c861b8ad7e7b708e8"
+      "sha256": "322a5f2ba0154452c4f8e6eba4233212a1d1a50e30492599281513b08735ec38"
     },
     {
       "path": "docs/117-0-2-2-maintenance-plan.en.md",
-      "bytes": 7170,
+      "bytes": 7233,
       "mode": "0644",
-      "sha256": "5f8829c28d016490d39a01c24cb0b73ede409c67294929f39d3b60b2e91fee3b"
+      "sha256": "d460652297b975ab740befb58a2b56afc489d984dbcf152d4a13f5381c28f94f"
     },
     {
       "path": "docs/117-0-2-2-maintenance-plan.pl.md",
-      "bytes": 7732,
+      "bytes": 7798,
       "mode": "0644",
-      "sha256": "1ee057e935beaa3b417a09f53365777d9ec23129acbeee1bb512713865eec4c7"
+      "sha256": "30725e625f45fad2bf5f029b0b9284bec74405d3193046cfdf36c9a8010b74a3"
     },
     {
       "path": "docs/12-product-philosophy.en.md",
