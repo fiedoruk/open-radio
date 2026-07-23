@@ -1,5 +1,27 @@
 # Open Radio Core2
 
+<p align="center"><img src="brand/logo-a-signal-cube.svg" width="92" alt="Open Radio — logo signal cube"></p>
+
+<p align="center">
+  <a href="https://github.com/fiedoruk/open-radio/actions/workflows/ci.yml"><img src="https://github.com/fiedoruk/open-radio/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
+  <img src="https://img.shields.io/badge/wydanie-0.2.1-3db8f5" alt="Wydanie 0.2.1">
+  <img src="https://img.shields.io/badge/licencja-GPL--3.0--or--later-blue" alt="GPL-3.0-or-later">
+  <img src="https://img.shields.io/badge/platforma-M5Stack_Core2-orange" alt="M5Stack Core2">
+  <img src="https://img.shields.io/badge/stacje-218_sprawdzonych-success" alt="218 sprawdzonych stacji">
+  <img src="https://img.shields.io/badge/testy-238_·_38_bramek-success" alt="238 testów, 38 bramek">
+</p>
+
+<p align="center"><a href="https://fiedoruk.pl/open-radio.html"><img src="https://fiedoruk.pl/assets/img/or/core2-1.jpg" width="740" alt="Open Radio grające na prawdziwej kostce M5Stack Core2"></a></p>
+
+<p align="center">
+  <img src="https://fiedoruk.pl/assets/img/or/screen-1.png" height="150" alt="Ekran odtwarzania">
+  <img src="https://fiedoruk.pl/assets/img/or/screen-2.png" height="150" alt="Wybór stacji">
+  <img src="https://fiedoruk.pl/assets/img/or/screen-3.png" height="150" alt="Ustawienia">
+  <img src="https://fiedoruk.pl/assets/img/or/screen-4.png" height="150" alt="Karta statusu">
+</p>
+
+<p align="center"><b><a href="https://fiedoruk.pl/open-radio-install.html">⚡ Zainstaluj z przeglądarki</a></b> · <a href="https://fiedoruk.pl/os/open-radio-0-2-1.bin">Pobierz 0.2.1</a> · <a href="docs/116-release-0-2-1.pl.md">Noty wydania</a> · <a href="https://fiedoruk.pl/open-radio-stacje.html">218 stacji</a></p>
+
 > Wydane publicznie jako **Open Radio** — aktualnym wydaniem jest **0.2.1**
 > (2026-07-22, zwalidowane sprzętowo w terenie na obu rewizjach Core2);
 > 0.1 i 0.2 pozostają do pobrania jako wydania historyczne.

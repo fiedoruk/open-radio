@@ -1817,15 +1817,15 @@
     },
     {
       "path": "README.md",
-      "bytes": 8901,
+      "bytes": 10635,
       "mode": "0644",
-      "sha256": "e6f0e824bf6249b02848cb6963b482306ad0e28f988ff5dfa34142cb4480bd6d"
+      "sha256": "7280aaaee2acd7014b7fe41a64c89e2d1bffdd46cb6f1df9176092a2656dd52d"
     },
     {
       "path": "README.pl.md",
-      "bytes": 9261,
+      "bytes": 10990,
       "mode": "0644",
-      "sha256": "518f1f7ac36373968d170b6f233f63db149c43f2463a72b42f2a2a234f60ef0e"
+      "sha256": "951c18376158824ef4f01b6976639e7568ed11490763c35b62cad1b43e891bd5"
     },
     {
       "path": "release/public-mirror-policy.json",

@@ -1,5 +1,27 @@
 # Open Radio Core2
 
+<p align="center"><img src="brand/logo-a-signal-cube.svg" width="92" alt="Open Radio — signal cube logo"></p>
+
+<p align="center">
+  <a href="https://github.com/fiedoruk/open-radio/actions/workflows/ci.yml"><img src="https://github.com/fiedoruk/open-radio/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
+  <img src="https://img.shields.io/badge/release-0.2.1-3db8f5" alt="Release 0.2.1">
+  <img src="https://img.shields.io/badge/license-GPL--3.0--or--later-blue" alt="GPL-3.0-or-later">
+  <img src="https://img.shields.io/badge/platform-M5Stack_Core2-orange" alt="M5Stack Core2">
+  <img src="https://img.shields.io/badge/stations-218_verified-success" alt="218 verified stations">
+  <img src="https://img.shields.io/badge/tests-238_·_38_gates-success" alt="238 tests, 38 gates">
+</p>
+
+<p align="center"><a href="https://fiedoruk.pl/open-radio-en.html"><img src="https://fiedoruk.pl/assets/img/or/core2-1.jpg" width="740" alt="Open Radio playing on a real M5Stack Core2 cube"></a></p>
+
+<p align="center">
+  <img src="https://fiedoruk.pl/assets/img/or/screen-1.png" height="150" alt="Now-playing screen">
+  <img src="https://fiedoruk.pl/assets/img/or/screen-2.png" height="150" alt="Station picker">
+  <img src="https://fiedoruk.pl/assets/img/or/screen-3.png" height="150" alt="Settings screen">
+  <img src="https://fiedoruk.pl/assets/img/or/screen-4.png" height="150" alt="Status card">
+</p>
+
+<p align="center"><b><a href="https://fiedoruk.pl/open-radio-install-en.html">⚡ Install from the browser</a></b> · <a href="https://fiedoruk.pl/os/open-radio-0-2-1.bin">Download 0.2.1</a> · <a href="docs/116-release-0-2-1.en.md">Release notes</a> · <a href="https://fiedoruk.pl/open-radio-stations-en.html">The 218 stations</a></p>
+
 > Released publicly as **Open Radio** — the current release is **0.2.1**
 > (2026-07-22, hardware-validated on both Core2 revisions in the field);
 > 0.1 and 0.2 remain downloadable as historical builds.
