@@ -68,8 +68,9 @@ The device-action protocol, image registry and rollback checkpoints remain in
   2026-07-23 probe showed Radio 357's revma mount serves MP3 over plain
   HTTP through token-issuing redirects, making it a catalog candidate for
   the next maintenance release after a device test.
-- The public repository launch is prepared and rehearsed, and waits for the
-  owner gate (`decisions/ADR-011`, `decisions/ADR-012`, `docs/114`).
+- The public repository is live: <https://github.com/fiedoruk/open-radio>
+  (sanitized import per `decisions/ADR-012`; the first CI run passed both
+  jobs, including the firmware compile).
 
 ## Product and release boundary
 
