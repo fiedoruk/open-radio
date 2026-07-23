@@ -77,10 +77,17 @@ deklaracji uniwersalnej zgodności przed fizycznymi testami.
 
 ## Bieżący zakres stacji
 
-RMF FM, Radio ZET, TOK FM, Antyradio, Radio ESKA, RMF MAXX, Radio Plus,
-Złote Przeboje i Meloradio.
+Kostka ma dziewięć slotów na stacje i **tę dziewiątkę wybierasz sam z
+wbudowanego katalogu 218 polskich stacji** — każda sprawdzona realnym
+połączeniem i zmierzona pod obciążeniem — przy pierwszym uruchomieniu oraz w
+dowolnej chwili później przez konsolę w telefonie (QR). Pełny katalog:
+[fiedoruk.pl/open-radio-stacje](https://fiedoruk.pl/open-radio-stacje.html).
 
-Wszystkie dziewięć pozycji katalogu ma ścieżki MP3 w publicznym torze źródłowym.
+Fabryczna dziewiątka (gra, dopóki nie ułożysz własnej): RMF FM, Radio ZET,
+TOK FM, Antyradio, Radio ESKA, RMF MAXX, Radio Plus, Złote Przeboje i
+Meloradio.
+
+Każda pozycja katalogu ma ścieżkę MP3 w publicznym torze źródłowym.
 Prywatny tor hardware-lab może zachować fallback AAC do diagnostyki, ale AAC i
 HLS pozostają poza publiczną binarką do osobnej bramki prawnej, transportowej i
 zasobowej. Projekt nie proxy'uje, nie retransmituje i nie nagrywa stacji ani nie

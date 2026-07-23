@@ -77,10 +77,17 @@ will be made before physical qualification.
 
 ## Current station scope
 
-RMF FM, Radio ZET, TOK FM, Antyradio, Radio ESKA, RMF MAXX, Radio Plus,
-Złote Przeboje and Meloradio.
+The device holds nine station slots, and **you pick those nine yourself from
+a built-in directory of 218 Polish stations** — each verified by a real
+connection and measured under load — at first power-on and any time later
+through the phone console (QR). Browse the full directory at
+[fiedoruk.pl/open-radio-stations-en](https://fiedoruk.pl/open-radio-stations-en.html).
 
-All nine catalog entries have MP3 playback paths in the public source lane.
+The factory default nine (used until you choose your own): RMF FM, Radio ZET,
+TOK FM, Antyradio, Radio ESKA, RMF MAXX, Radio Plus, Złote Przeboje and
+Meloradio.
+
+Every directory entry ships with an MP3 playback path in the public source lane.
 The private hardware-lab lane can retain an AAC fallback for diagnosis, but AAC
 and HLS remain outside a public binary until separate legal, transport and
 resource gates pass. The project does not proxy, rebroadcast or record station
