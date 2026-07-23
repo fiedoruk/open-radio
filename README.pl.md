@@ -66,7 +66,9 @@ sugeruje ich poparcia.
 
 ## Docelowy sprzęt
 
-- M5Stack Core2 z ESP32-D0WDQ6-V3
+- M5Stack Core2 z ESP32-D0WDQ6-V3 — zwalidowany w terenie na rewizjach
+  sprzętu v1.0 (AXP192) i v1.1 (AXP2101) tym samym obrazem; każda nowa
+  rewizja Core2 wchodzi do macierzy testów wydania, gdy tylko jest dostępna
 - 16 MB flash i 8 MB PSRAM
 - ekran dotykowy 320×240
 - wbudowany głośnik I2S i bateria

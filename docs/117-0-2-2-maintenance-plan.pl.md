@@ -121,7 +121,8 @@ punktami A, jest domyślnie poza zakresem.
 - **Faza 3 — inżynieria wydania:** A5/A6; udokumentowana nowa baza
   determinizmu.
 - **Faza 4 — bramka sprzętowa (okna właściciela):** macierz flashowania
-  fabrycznie świeżych kostek, smoke dziewięciu stacji plus stacje z konsoli
+  fabrycznie świeżych kostek na każdej rewizji Core2 dostępnej w chwili
+  bramki (dziś v1.0 i v1.1; nadchodząca v1.3 dołącza od ręki), smoke dziewięciu stacji plus stacje z konsoli
   (w tym kandydat 357), pełny pass pobierania logo, cykle reconnect
   Bluetooth, recovery Wi-Fi, 60-minutowy soak (domknięcie długo otwartego
   B1), pomiar czasu na baterii zastępujący publikowany szacunek oraz próbny

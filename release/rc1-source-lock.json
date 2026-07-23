@@ -593,15 +593,15 @@
     },
     {
       "path": "docs/117-0-2-2-maintenance-plan.en.md",
-      "bytes": 7050,
+      "bytes": 7170,
       "mode": "0644",
-      "sha256": "e89f4204f7635c38f69bd4291899606a6ad445e11b35cbdec0a8bdbbccabcad2"
+      "sha256": "5f8829c28d016490d39a01c24cb0b73ede409c67294929f39d3b60b2e91fee3b"
     },
     {
       "path": "docs/117-0-2-2-maintenance-plan.pl.md",
-      "bytes": 7620,
+      "bytes": 7732,
       "mode": "0644",
-      "sha256": "f9a74c220c326d0ece0e6de6172ed1c399ea1ad5365d883732ef114144d8336b"
+      "sha256": "1ee057e935beaa3b417a09f53365777d9ec23129acbeee1bb512713865eec4c7"
     },
     {
       "path": "docs/12-product-philosophy.en.md",
@@ -1817,15 +1817,15 @@
     },
     {
       "path": "README.md",
-      "bytes": 8719,
+      "bytes": 8901,
       "mode": "0644",
-      "sha256": "e1a8e48bbc3c957bb321f1a981475f1de41c5cec816787a6f586f4118d43023c"
+      "sha256": "e6f0e824bf6249b02848cb6963b482306ad0e28f988ff5dfa34142cb4480bd6d"
     },
     {
       "path": "README.pl.md",
-      "bytes": 9071,
+      "bytes": 9261,
       "mode": "0644",
-      "sha256": "c2851cfea2a449fe6328b498d671b19f008d4d8df6cb153c4a4ad25e8f677ada"
+      "sha256": "518f1f7ac36373968d170b6f233f63db149c43f2463a72b42f2a2a234f60ef0e"
     },
     {
       "path": "release/public-mirror-policy.json",

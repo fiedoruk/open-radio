@@ -115,8 +115,10 @@ surfaces beyond the A-items listed above is out of scope by default.
   second-agent review before merge.
 - **Phase 3 — release engineering:** A5/A6; document the new determinism
   baseline.
-- **Phase 4 — hardware gate (owner windows):** factory-fresh flash matrix,
-  nine-station smoke plus console-added stations (including the 357
+- **Phase 4 — hardware gate (owner windows):** factory-fresh flash matrix
+  on every Core2 revision available at gate time (v1.0 and v1.1 today; the
+  incoming v1.3 joins the moment it arrives), nine-station smoke plus
+  console-added stations (including the 357
   candidate), full logo fetch pass, Bluetooth reconnect cycles, Wi-Fi
   recovery, a 60-minute soak (closing the long-open B1), a battery-duration
   measurement to replace the published estimate, and a rehearsed rollback

@@ -66,7 +66,9 @@ audio and does not imply broadcaster endorsement.
 
 ## Hardware target
 
-- M5Stack Core2 with ESP32-D0WDQ6-V3
+- M5Stack Core2 with ESP32-D0WDQ6-V3 — field-validated on hardware
+  revisions v1.0 (AXP192) and v1.1 (AXP2101) with the same image; every new
+  Core2 revision joins the release test matrix as soon as it is available
 - 16 MB flash and 8 MB PSRAM
 - 320×240 touch display
 - built-in I2S speaker and internal battery
