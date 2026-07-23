@@ -86,7 +86,7 @@ nie istnieją w firmware urządzenia i nigdy nie mogą stać się zależnością
   przedwydaniowego obrazu labowego, nie wydanego 0.2.1.
 - Wymuszone cykle recovery Wi-Fi/streamu/głośnika, zachowanie PMU/baterii/SD
   i dłuższe endurance pozostają dla 0.2.1 formalnie niezakwalifikowane.
-- Wszystkie dziewięć bieżących stacji używa ścieżek MP3, ale dostępność
+- Wszystkie dziewięć stacji wybranych z katalogu 218 używa ścieżek MP3, ale dostępność
   endpointów może zmieniać się niezależnie od jakiegokolwiek wydania.
 - Pełna lista znanych ograniczeń bieżącego wydania jest w
   [docs/116-release-0-2-1.pl.md](docs/116-release-0-2-1.pl.md).

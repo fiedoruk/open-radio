@@ -89,7 +89,7 @@ become playback dependencies.
   pre-release lab image, not the shipped 0.2.1.
 - Forced Wi-Fi/stream/speaker recovery cycles, PMU/battery/SD behavior and
   longer endurance remain formally unqualified for 0.2.1.
-- All nine current catalog entries use MP3 paths, but endpoint availability
+- All nine stations you pick from the 218-entry directory use MP3 paths, but endpoint availability
   can change independently of any firmware release.
 - The full known-limitations list for the current release lives in
   [docs/116-release-0-2-1.en.md](docs/116-release-0-2-1.en.md).

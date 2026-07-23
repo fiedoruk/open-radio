@@ -27,8 +27,8 @@ CORE2 REVISIONS`
   0.2.1 bundle is published next to the binary); provenance lives in `output/firmware/public-0-2/MANIFEST.json`
   (local build output, not tracked).
 - **0.1** — tag `open-radio-0-1`, still downloadable as the previous release.
-  Its public image was never smoke-tested on hardware; 0.2 is the validated
-  path.
+  Its public image was never smoke-tested on hardware; the 0.2 line
+  (currently 0.2.1) is the validated path.
 
 ## Hardware evidence
 
