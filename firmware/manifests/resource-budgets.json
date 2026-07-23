@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "target": "m5stack-core2",
+  "softwareGates": {
+    "applicationFlashBytesMax": 2359296,
+    "staticRamBytesMax": 131072,
+    "publicBinaryBytesMax": 2359296,
+    "pcmBufferBytesMax": 65536
+  },
+  "runtimeHostGates": {
+    "eventQueueCapacity": 16,
+    "timerCapacity": 8,
+    "diagnosticCapacity": 32,
+    "maximumRetryDelayMs": 600000,
+    "queueOverflowsAllowed": 0,
+    "timerOverflowsAllowed": 0
+  },
+  "ingressHostGates": {
+    "mailboxCapacity": 16,
+    "producerCount": 7,
+    "rawTickBits": 32,
+    "maximumDrainPerPass": 16,
+    "deliveryRejectedAllowed": 0
+  },
+  "hardwareIngressMeasurements": {
+    "internalHeapFreeBytes": "NOT_MEASURED",
+    "ownerTaskStackHeadroomBytes": "NOT_MEASURED",
+    "maximumCallbackLatencyUs": "NOT_MEASURED",
+    "audioUnderruns": "NOT_MEASURED"
+  },
+  "hardwareGatesPending": {
+    "internalHeapFreeBytesMin": 61440,
+    "largestFreeBlockBytesMin": 32768,
+    "audioTaskStackHeadroomBytesMin": 2048,
+    "underrunsPerHourMax": 3,
+    "watchdogResetsAllowed": 0
+  }
+}

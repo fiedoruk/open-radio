@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "reportType": "BLUETOOTH_COMPATIBILITY",
+  "firmwareSha256": "98f0477a655cd42db42f6c806c059af9b8c33e6b0cd2eb6cd9b40d5fc1f44555",
+  "speakerClass": "OLDER_SBC",
+  "profile": "CLASSIC_A2DP",
+  "a2dpSink": "SUPPORTED",
+  "sbc": "SUPPORTED",
+  "avrcpObserved": "ABSENT",
+  "outcome": "PASS",
+  "reconnectBucket": "S5_TO_15",
+  "localFallback": "PASS"
+}

@@ -1,0 +1,48 @@
+:root {
+  color-scheme: dark;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #f7fafc;
+  background: #080c11;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; min-height: 100vh; background: radial-gradient(circle at 16% 0%, rgba(105,217,181,.17), transparent 34rem), #080c11; }
+header, main { width: min(1320px, calc(100% - 48px)); margin: 0 auto; }
+header { padding: 56px 0 30px; }
+.eyebrow { margin: 0 0 10px; color: #69d9b5; font-size: 12px; font-weight: 900; letter-spacing: .16em; text-transform: uppercase; }
+h1 { margin: 0; font-size: clamp(52px, 8vw, 112px); line-height: .9; letter-spacing: -.055em; }
+h1 span { color: #ffb454; }
+.lead { max-width: 760px; margin: 22px 0 0; color: #a8b5c2; font-size: 18px; line-height: 1.5; }
+.specimen-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+.specimen { overflow: hidden; border: 1px solid #293846; border-radius: 28px; background: #111820; box-shadow: 0 24px 70px rgba(0,0,0,.28); }
+.mark-stage { display: grid; place-items: center; min-height: 300px; padding: 34px; }
+.mark-stage > img { width: min(100%, 220px); height: auto; }
+.specimen > div:last-child { display: grid; gap: 5px; padding: 18px 20px 20px; border-top: 1px solid rgba(128,146,163,.2); }
+.specimen strong { font-size: 18px; }
+.specimen span { color: #9cabb8; font-size: 12px; }
+.specimen-primary .mark-stage { background: #f2f5f4; }
+.specimen-negative .mark-stage { background: #0b1016; }
+.specimen-mono .mark-stage { background: #dfe6e3; }
+.specimen-micro .mark-stage { background: linear-gradient(135deg, #111820, #1b2632); }
+.micro-sizes { display: flex; align-items: center; justify-content: center; gap: 18px; }
+.micro-sizes figure { display: grid; place-items: center; gap: 8px; min-width: 42px; margin: 0; }
+.micro-sizes img { flex: 0 0 auto; max-width: none; image-rendering: pixelated; }
+.micro-sizes figcaption { color: #9cabb8; font: 800 10px/1 system-ui, sans-serif; }
+.rules { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 14px; }
+.rules article { display: grid; gap: 8px; padding: 20px; border: 1px solid #293846; border-radius: 18px; background: #111820; }
+.rules strong { color: #69d9b5; font-size: 13px; letter-spacing: .08em; text-transform: uppercase; }
+.rules span { color: #9cabb8; font-size: 13px; line-height: 1.45; }
+.back { display: inline-flex; margin: 24px 0 56px; padding: 13px 18px; border: 1px solid #334454; border-radius: 14px; color: #f7fafc; text-decoration: none; background: #15202b; font-weight: 800; }
+.back:hover { border-color: #69d9b5; }
+
+@media (max-width: 720px) {
+  .specimen-grid { grid-template-columns: repeat(2, 1fr); }
+  .rules { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 480px) {
+  header, main { width: min(100% - 24px, 1320px); }
+  header { padding-top: 34px; }
+  .specimen-grid { grid-template-columns: 1fr; }
+  .mark-stage { min-height: 240px; }
+}

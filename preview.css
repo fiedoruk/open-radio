@@ -1,0 +1,46 @@
+:root {
+  color-scheme: dark;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #080b0f;
+  color: #f6f8fb;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 12% 0%, rgba(105, 217, 181, .16), transparent 32rem),
+    radial-gradient(circle at 90% 12%, rgba(169, 155, 255, .13), transparent 34rem),
+    #080b0f;
+}
+
+.preview-home {
+  width: min(1120px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 64px 0;
+}
+
+header { max-width: 820px; }
+.eyebrow { margin: 0 0 14px; color: #69d9b5; font-size: 12px; font-weight: 850; letter-spacing: .16em; text-transform: uppercase; }
+h1 { margin: 0; font-size: clamp(42px, 7vw, 76px); line-height: .98; letter-spacing: -.055em; }
+.lead { max-width: 720px; margin: 24px 0 0; color: #a8b2be; font-size: 18px; line-height: 1.55; }
+
+.start-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-top: 48px; }
+.start-card { display: grid; align-content: start; gap: 14px; min-height: 230px; padding: 24px; border: 1px solid #26313d; border-radius: 22px; color: inherit; background: rgba(14, 20, 27, .92); text-decoration: none; transition: border-color .15s ease, transform .15s ease; }
+.start-card:hover { border-color: #69d9b5; transform: translateY(-2px); }
+.start-card--primary { border-color: #69d9b5; box-shadow: 0 0 0 2px rgba(105, 217, 181, .12); }
+.step { color: #69d9b5; font-size: 11px; font-weight: 850; letter-spacing: .1em; text-transform: uppercase; }
+.start-card strong { font-size: 24px; letter-spacing: -.02em; }
+.start-card > span:last-child { color: #a1acb8; font-size: 15px; line-height: 1.5; }
+
+.scope-note { display: flex; gap: 12px; margin-top: 18px; padding: 18px 20px; border: 1px solid #242f3a; border-radius: 16px; color: #a8b2be; background: #0e141b; }
+.scope-note strong { flex: 0 0 auto; color: #f6f8fb; }
+
+@media (max-width: 820px) {
+  .preview-home { padding: 40px 0; }
+  .start-grid { grid-template-columns: 1fr; }
+  .start-card { min-height: 0; }
+  .scope-note { flex-direction: column; }
+}

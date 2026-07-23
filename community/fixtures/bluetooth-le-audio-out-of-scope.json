@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "reportType": "BLUETOOTH_COMPATIBILITY",
+  "firmwareSha256": "98f0477a655cd42db42f6c806c059af9b8c33e6b0cd2eb6cd9b40d5fc1f44555",
+  "speakerClass": "MODERN_MULTIPROFILE",
+  "profile": "LE_AUDIO_ONLY",
+  "a2dpSink": "UNSUPPORTED",
+  "sbc": "UNSUPPORTED",
+  "avrcpObserved": "UNKNOWN",
+  "outcome": "OUT_OF_SCOPE",
+  "reconnectBucket": "NOT_MEASURED",
+  "localFallback": "NOT_MEASURED"
+}

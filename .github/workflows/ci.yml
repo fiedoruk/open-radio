@@ -1,0 +1,67 @@
+name: Host contracts
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: host-contracts-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    name: Node and C++ host gate
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - name: Check out source
+        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: 24.18.0
+
+      - name: Install the pinned font generator
+        run: |
+          python3 -m venv "$RUNNER_TEMP/open-radio-font-venv"
+          "$RUNNER_TEMP/open-radio-font-venv/bin/python" -m pip install --requirement third_party/fonts/inter/requirements.lock.txt
+          echo "$RUNNER_TEMP/open-radio-font-venv/bin" >> "$GITHUB_PATH"
+
+      - name: Run the complete host gate
+        run: npm run check
+
+      - name: Reject whitespace errors
+        run: git diff --check
+
+      - name: Reject generated-file drift
+        run: test -z "$(git status --porcelain)"
+
+  firmware:
+    name: PlatformIO firmware compile
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - name: Check out source
+        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+
+      - name: Ensure uv
+        run: |
+          command -v uv >/dev/null 2>&1 \
+            || pipx install uv \
+            || python3 -m pip install --user --break-system-packages uv
+
+      - name: Bootstrap the pinned firmware toolchain
+        run: bash scripts/bootstrap-firmware-toolchain.sh
+
+      - name: Compile the public candidate
+        run: .tools/venv/bin/pio run -d firmware/public-candidate -e core2-public-candidate
+
+      - name: Verify the resolved dependency tree against the lock
+        run: node scripts/check-resolved-libdeps.mjs

@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "captureStatus": "NOT_CAPTURED",
+  "hardwareValidated": false,
+  "board": "m5stack-core2",
+  "speakerCandidateId": "xiaomi-sound-pocket",
+  "speakerRevision": "MDZ-37-DB",
+  "firmwareSha256": null,
+  "measurements": {
+    "internalHeapFreeBytes": "NOT_MEASURED",
+    "ownerTaskStackHeadroomBytes": "NOT_MEASURED",
+    "maximumCallbackLatencyUs": "NOT_MEASURED",
+    "audioUnderruns": "NOT_MEASURED"
+  },
+  "redaction": {
+    "ssid": "PROHIBITED",
+    "credential": "PROHIBITED",
+    "endpoint": "PROHIBITED",
+    "bssidOrMac": "PROHIBITED",
+    "pcm": "PROHIBITED",
+    "artwork": "PROHIBITED"
+  },
+  "traces": []
+}

@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Open Radio Core2 — emulator urządzenia</title>
+  <link rel="icon" href="../brand/logo-a-signal-cube-micro.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <main>
+    <header>
+      <p class="eyebrow">Open Radio Core2 · software-only</p>
+      <h1>Jeden ekran. Ten sam renderer co firmware.</h1>
+      <p>Dotykaj ekranu albo trzech pól A/B/C pod nim. Aktywny obraz ma dokładnie 320×240 pikseli RGB565 i korzysta z atlasu Inter 600.</p>
+    </header>
+
+    <section class="device-stage" aria-labelledby="device-status">
+      <div class="core2-shell" aria-label="Mockup M5Stack Core2 for AWS w proporcjach urządzenia 54 na 54 milimetry">
+        <div class="core2-face">
+          <canvas id="device-frame" width="320" height="240" tabindex="0" aria-label="Interaktywny ekran Open Radio Core2, dokładnie 320 na 240 pikseli"></canvas>
+          <button class="touch-button touch-a" type="button" data-device-button="a" aria-label="Touch A: poprzednia stacja"></button>
+          <button class="touch-button touch-b" type="button" data-device-button="b" aria-label="Touch B: stacje lub ekran główny"></button>
+          <button class="touch-button touch-c" type="button" data-device-button="c" aria-label="Touch C: następna stacja"></button>
+        </div>
+      </div>
+      <p class="button-help">A · poprzednia&nbsp;&nbsp;&nbsp; B · stacje / dom&nbsp;&nbsp;&nbsp; C · następna</p>
+      <p id="device-status" role="status">C++ → RGB565 · 320×240 · Inter 600 · renderuję…</p>
+    </section>
+
+    <p class="truth"><strong>Zakres prawdy:</strong> framebuffer, flow ekranu i A/B/C są kanoniczne. Fizyczna jasność, opóźnienia panelu, kąty widzenia i czułość dotyku pozostają NIEZMIERZONE do testu na Core2.</p>
+  </main>
+  <script type="module" src="./app.mjs"></script>
+</body>
+</html>

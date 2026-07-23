@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "fixtures": [
+    {"path": "community/fixtures/bluetooth-classic-pass.json", "expectedCode": "PASS"},
+    {"path": "community/fixtures/bluetooth-le-audio-out-of-scope.json", "expectedCode": "PASS"},
+    {"path": "community/fixtures/station-mp3-playing.json", "expectedCode": "PASS"},
+    {"path": "community/fixtures/station-unsupported-codec.json", "expectedCode": "PASS"},
+    {"path": "community/fixtures/replay-good.json", "expectedCode": "PASS", "replay": true},
+    {"path": "community/fixtures/replay-stale-firmware.json", "expectedCode": "STALE_FIRMWARE"},
+    {"path": "community/fixtures/replay-schema-rejection.json", "expectedCode": "SCHEMA_REJECTED"}
+  ]
+}

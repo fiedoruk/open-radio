@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fiedoruk.pl/open-radio/schemas/station-playback-result.schema.json",
+  "title": "StationPlaybackResult",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "reportType", "firmwareSha256", "stationId", "declaredCodec", "outcome", "durationBucket"],
+  "properties": {
+    "schemaVersion": {"const": 1},
+    "reportType": {"const": "STATION_PLAYBACK"},
+    "firmwareSha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "stationId": {"enum": ["rmf-fm", "radio-zet", "antyradio", "meloradio", "zlote-przeboje", "chillizet", "rmf-maxx", "radio-eska", "radio-pogoda"]},
+    "declaredCodec": {"enum": ["MP3_ICY", "HLS_HE_AAC"]},
+    "outcome": {"enum": ["PLAYING", "RECOVERED", "BOUNDED_RETRY", "UNSUPPORTED", "FAILED", "NOT_MEASURED"]},
+    "durationBucket": {"enum": ["LT_5M", "M5_TO_15", "M16_TO_60", "GT_60M", "NOT_APPLICABLE"]}
+  }
+}

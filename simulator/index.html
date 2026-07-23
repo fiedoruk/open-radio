@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Open Radio Core2 — symulator recovery</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23101820'/%3E%3Ccircle cx='32' cy='32' r='18' fill='none' stroke='%2364D8B4' stroke-width='6'/%3E%3Ccircle cx='32' cy='32' r='5' fill='%23FFB36B'/%3E%3C/svg%3E">
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <main class="lab">
+      <header class="lab__header">
+        <div>
+          <p class="eyebrow">M5Stack Core2 · 320 × 240</p>
+          <h1>Symulator recovery</h1>
+          <p>Logiczny emulator ekranu i recovery. Bez sprzętu, audio i prawdziwego Bluetooth.</p>
+        </div>
+        <div class="scale" aria-label="Skala emulatora">
+          <button data-scale="1">1×</button>
+          <button data-scale="2" class="is-active">2×</button>
+          <button data-scale="3">3×</button>
+        </div>
+      </header>
+
+      <section class="workspace">
+        <div class="device-column">
+          <div class="device" aria-label="Emulowany M5Stack Core2">
+            <div class="device__bezel">
+              <canvas id="screen" width="320" height="240" aria-label="Ekran radia 320 na 240 pikseli"></canvas>
+            </div>
+            <div class="device__buttons" aria-hidden="true"><span></span><span></span><span></span></div>
+          </div>
+          <p class="device-note">Canvas ma dokładnie 320×240. Obudowa i panel scenariuszy nie należą do firmware.</p>
+        </div>
+
+        <aside class="scenario-panel">
+          <div class="panel-heading">
+            <div><p class="eyebrow">Scenario controls</p><h2>Symulacja urządzenia</h2></div>
+            <label class="toggle"><input id="hitbox-toggle" type="checkbox"> Hitboxy</label>
+          </div>
+          <div class="scenario-group">
+            <h3>Start</h3>
+            <div class="button-grid">
+              <button data-event="RESET_SIMULATOR">Pierwszy start</button>
+              <button data-event="LOAD_READY">Gotowe radio</button>
+              <button data-event="WIFI_CONFIGURED">Portal zapisał Wi-Fi</button>
+            </div>
+          </div>
+          <div class="scenario-group">
+            <h3>Awarie i recovery</h3>
+            <div class="button-grid">
+              <button data-event="WIFI_LOST">Utrata Wi-Fi</button>
+              <button data-event="WIFI_RECOVERED">Wi-Fi wróciło</button>
+              <button data-event="BLUETOOTH_LOST">Utrata BT</button>
+              <button data-event="BLUETOOTH_RECOVERED">BT wrócił</button>
+              <button data-event="STATION_FAILED">Stacja padła</button>
+              <button data-event="STATION_RECOVERED">Stacja wróciła</button>
+              <button data-event="ENTER_SAFE_MODE">Safe mode</button>
+            </div>
+          </div>
+          <div class="scenario-group compact-controls">
+            <h3>Konfiguracja</h3>
+            <button id="locale-toggle">PL / EN</button>
+            <button id="volume-down">Głośność −</button>
+            <button id="volume-up">Głośność +</button>
+          </div>
+          <div class="state-card">
+            <div><span>Screen</span><strong id="state-screen">—</strong></div>
+            <div><span>System</span><strong id="state-system">—</strong></div>
+            <div><span>Audio</span><strong id="state-output">—</strong></div>
+            <div><span>Wi-Fi</span><strong id="state-wifi">—</strong></div>
+          </div>
+        </aside>
+      </section>
+    </main>
+    <script type="module" src="./app.mjs"></script>
+  </body>
+</html>

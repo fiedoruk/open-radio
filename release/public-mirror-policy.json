@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "remoteName": "public",
+  "repositoryUrl": "git@github.com:fiedoruk/open-radio.git",
+  "publishBranches": ["main"],
+  "publishTagPattern": "open-radio-*",
+  "forbiddenTrackedPathPatterns": [
+    "^assets-local/",
+    "(^|/)raport-[^/]*$",
+    "^CLAUDE\\.md$",
+    "(^|/)\\.env(\\..+)?$",
+    "(^|/)id_(rsa|ed25519)[^/]*$",
+    "\\.(pem|p12|pfx|keystore)$"
+  ],
+  "forbiddenContentPatterns": [
+    "/Users/"
+  ]
+}

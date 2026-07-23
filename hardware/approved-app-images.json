@@ -1,0 +1,600 @@
+{
+  "schemaVersion": 1,
+  "purpose": "Closed allowlist for exact app0 recovery/candidate flashes; it is not a history of every built image and approval does not imply endurance qualification.",
+  "developmentSurfaceId": "in-development-0-2-v4",
+  "productSurfaces": {
+    "current-nine-station-logo-pack-v1": {
+      "baselineSourceCommit": "a47f6a66167a183165c9914d5447711f18c9b3aa",
+      "rendererSourceSha256": "484e3163bd0edc1eb22f62b912061c1a4e8ce3afc69cfde0da7feedcfe438501",
+      "rendererContractSha256": "3cd1279ee46ff4fe11a31ed5808078ea83ac51e2097451bfc98d9c0eaa711c65",
+      "firmwareCatalogSha256": "82f185f855410a29855a11d69034791286eafd097a8714d50f0859769d375186",
+      "stationListSha256": "ac8292cdc640b81d456a89a0b10a2f1daf73458a64145c5e0302d976e7369b9f",
+      "stationIdentitiesSha256": "f50bf16494e6738a58a8da0bd72a84d6fbde91ac02502feaa73d43297234041f",
+      "configSchemaSha256": "8c87737fedc11667fd346683d5cabd90f743b7b80c49b9f7994991c8283b63bc",
+      "configSchemaVersion": 2,
+      "logoPackRequired": true,
+      "stationCount": 9
+    },
+    "current-nine-station-logo-pack-battery-v2": {
+      "baselineSourceCommit": "791ebd49d87d904a14956fa21688fbfe5fbff65e",
+      "rendererSourceSha256": "888d656f36a95a552b5711821c5f7403f8c9349e58aef00f976fe7f493342ac8",
+      "rendererInterfaceSha256": "c1deee1916a94be9ec04cef3c73f91134e6e77bc9d3c032325226b03d9bd40b5",
+      "rendererContractSha256": "3cd1279ee46ff4fe11a31ed5808078ea83ac51e2097451bfc98d9c0eaa711c65",
+      "firmwareCatalogSha256": "82f185f855410a29855a11d69034791286eafd097a8714d50f0859769d375186",
+      "stationListSha256": "ac8292cdc640b81d456a89a0b10a2f1daf73458a64145c5e0302d976e7369b9f",
+      "stationIdentitiesSha256": "f50bf16494e6738a58a8da0bd72a84d6fbde91ac02502feaa73d43297234041f",
+      "configSchemaSha256": "8c87737fedc11667fd346683d5cabd90f743b7b80c49b9f7994991c8283b63bc",
+      "configSchemaVersion": 2,
+      "logoPackRequired": true,
+      "stationCount": 9
+    },
+    "current-nine-station-logo-pack-battery-noise-v3": {
+      "baselineSourceCommit": "97f3e9b305a8a6370cd2601a24c64a3efe0c4225",
+      "rendererSourceSha256": "f75d3285edc6f05a9c91320074aadf646b9d3178a88b9abc6ea6615c2bd6957b",
+      "rendererInterfaceSha256": "480488816009360586e88cdc16ed14cd1de5175bd4ceaf4f9fb058d111466177",
+      "rendererContractSha256": "3cd1279ee46ff4fe11a31ed5808078ea83ac51e2097451bfc98d9c0eaa711c65",
+      "firmwareCatalogSha256": "82f185f855410a29855a11d69034791286eafd097a8714d50f0859769d375186",
+      "stationListSha256": "ac8292cdc640b81d456a89a0b10a2f1daf73458a64145c5e0302d976e7369b9f",
+      "stationIdentitiesSha256": "f50bf16494e6738a58a8da0bd72a84d6fbde91ac02502feaa73d43297234041f",
+      "configSchemaSha256": "8c87737fedc11667fd346683d5cabd90f743b7b80c49b9f7994991c8283b63bc",
+      "configSchemaVersion": 2,
+      "logoPackRequired": true,
+      "stationCount": 9
+    },
+    "in-development-0-2-v4": {
+      "baselineSourceCommit": "baf61846baa462658a3b2145d07a5e9b567f8765",
+      "rendererSourceSha256": "9a60208b72e17b85a587b8673a3f8b55b62ac2e7ce756c55a69eaa0add5ff7a7",
+      "rendererInterfaceSha256": "f3d990e4b1815a4070a529da40f6e5d22c81c40147f4595fc0056e1cbd4c916c",
+      "rendererContractSha256": "3bdfa297f5d0165bef2e9266f9c281a451ffac843b8302b41761cab0ba330aa3",
+      "firmwareCatalogSha256": "63dd8c8e15da50a41a840510ef3f139cb4623af3beeba10dcad2a650d54e8e54",
+      "stationListSha256": "025b94d3477f9146662d9479cca60eacdc5ffedc9ca750336f6d784455f694c3",
+      "stationIdentitiesSha256": "de5ad2991e52db3c3eb10b96686407b953cb95dea3de3b7792d1cc3534d4b914",
+      "configSchemaSha256": "8c87737fedc11667fd346683d5cabd90f743b7b80c49b9f7994991c8283b63bc",
+      "configSchemaVersion": 2,
+      "logoPackRequired": true,
+      "stationCount": 9,
+      "development": true,
+      "note": "Source surface of the in-progress 0.2 work. No approved image may bind to it; images freeze their surface at approval time."
+    },
+    "measurement-0-2-192kbps-v5": {
+      "baselineSourceCommit": "d96b83b13d3b1e3c686f3f78388b72245dca8bad",
+      "rendererSourceSha256": "6c13518a66d7c49340bd1511c3f0231146b3af6039481d07ac85d4eca144ff24",
+      "rendererInterfaceSha256": "8e1a436226c0021930ff5719caf2dbb52020ddf3e9e4ad8ce0e015d21af04107",
+      "rendererContractSha256": "aa51d1011462cd0f54fd0c39918b91491e0ff9081788e5462a690c0105282004",
+      "firmwareCatalogSha256": "ed47e8895f7bebb7e9a5b4a951effb79bba3e44fa1c2033ff114df468e5e7f1c",
+      "stationListSha256": "a0b88f843c4a5750047bb8bb0cc318c261dd0fdd84c1d423e0965fe57f15c62c",
+      "stationIdentitiesSha256": "27a27e460bd956622895e2c10b564b8add42364cc59322f954c118ddf0b4d6a3",
+      "configSchemaSha256": "8c87737fedc11667fd346683d5cabd90f743b7b80c49b9f7994991c8283b63bc",
+      "configSchemaVersion": 2,
+      "logoPackRequired": true,
+      "stationCount": 9,
+      "development": false,
+      "note": "Exact source surface of the lab image built to measure whether a 192 kb/s MP3 stream survives under an active A2DP link. Jedynka and Polskie Radio 24 occupy slots 2 and 7 solely so the question can be asked on hardware."
+    },
+    "block-a-close-0-2-v6": {
+      "baselineSourceCommit": "33d0e227e02cdc02c3ac3232757c3d05726c50fe",
+      "rendererSourceSha256": "8e226b4b37b44c2598b5d6d1fd51539c5b0372f22056c9863b818a37635124f9",
+      "rendererInterfaceSha256": "0c7600af7477e156513f8043c4c7d11fb5569b0a95a93de18ed50b85cad21f3b",
+      "rendererContractSha256": "3bdfa297f5d0165bef2e9266f9c281a451ffac843b8302b41761cab0ba330aa3",
+      "firmwareCatalogSha256": "52922c30e79a10416e08f27539ea1591850a36cdc7e91427df238fe50ac84807",
+      "stationListSha256": "025b94d3477f9146662d9479cca60eacdc5ffedc9ca750336f6d784455f694c3",
+      "stationIdentitiesSha256": "de5ad2991e52db3c3eb10b96686407b953cb95dea3de3b7792d1cc3534d4b914",
+      "configSchemaSha256": "8c87737fedc11667fd346683d5cabd90f743b7b80c49b9f7994991c8283b63bc",
+      "configSchemaVersion": 2,
+      "logoPackRequired": true,
+      "stationCount": 9,
+      "note": "Frozen surface of the block-A close of 0.2: runtime logos with slot clipping, nine-tile picker, glance status card, Wi-Fi address + mDNS, console session, ADR-010/docs-112."
+    },
+    "console-fix-0-2-v7": {
+      "baselineSourceCommit": "67677bfa55ad7184b7d626a291e64701a541de24",
+      "rendererSourceSha256": "cdcc101dbf6d0545d605976d1e6c3f0634c8d614f24da0e8572770a20f71013d",
+      "rendererInterfaceSha256": "f3d990e4b1815a4070a529da40f6e5d22c81c40147f4595fc0056e1cbd4c916c",
+      "rendererContractSha256": "3bdfa297f5d0165bef2e9266f9c281a451ffac843b8302b41761cab0ba330aa3",
+      "firmwareCatalogSha256": "52922c30e79a10416e08f27539ea1591850a36cdc7e91427df238fe50ac84807",
+      "stationListSha256": "025b94d3477f9146662d9479cca60eacdc5ffedc9ca750336f6d784455f694c3",
+      "stationIdentitiesSha256": "de5ad2991e52db3c3eb10b96686407b953cb95dea3de3b7792d1cc3534d4b914",
+      "configSchemaSha256": "8c87737fedc11667fd346683d5cabd90f743b7b80c49b9f7994991c8283b63bc",
+      "configSchemaVersion": 2,
+      "logoPackRequired": true,
+      "stationCount": 9,
+      "note": "Frozen surface of the console-fix build: heartbeat-bounded console session, console wizard flow, toggling Console tile."
+    },
+    "console-qr-0-2-v8": {
+      "baselineSourceCommit": "8cc11d8ad7cbd73a1c0f5b700ae0d92b2cbc86b5",
+      "rendererSourceSha256": "76eac017429230b0ef73cfd8be46db6c94126b7f2fbec150951648a9daf620e2",
+      "rendererInterfaceSha256": "f3d990e4b1815a4070a529da40f6e5d22c81c40147f4595fc0056e1cbd4c916c",
+      "rendererContractSha256": "3bdfa297f5d0165bef2e9266f9c281a451ffac843b8302b41761cab0ba330aa3",
+      "firmwareCatalogSha256": "52922c30e79a10416e08f27539ea1591850a36cdc7e91427df238fe50ac84807",
+      "stationListSha256": "025b94d3477f9146662d9479cca60eacdc5ffedc9ca750336f6d784455f694c3",
+      "stationIdentitiesSha256": "de5ad2991e52db3c3eb10b96686407b953cb95dea3de3b7792d1cc3534d4b914",
+      "configSchemaSha256": "8c87737fedc11667fd346683d5cabd90f743b7b80c49b9f7994991c8283b63bc",
+      "configSchemaVersion": 2,
+      "logoPackRequired": true,
+      "stationCount": 9,
+      "note": "Frozen surface of the console-QR build: QR-first console screen, session ends on station pick or bottom button, non-toggling tile."
+    },
+    "wifi-retry-0-2-v9": {
+      "baselineSourceCommit": "567487dba6a04a732998d3f9b3c758bd7d2c862b",
+      "rendererSourceSha256": "76eac017429230b0ef73cfd8be46db6c94126b7f2fbec150951648a9daf620e2",
+      "rendererInterfaceSha256": "f3d990e4b1815a4070a529da40f6e5d22c81c40147f4595fc0056e1cbd4c916c",
+      "rendererContractSha256": "3bdfa297f5d0165bef2e9266f9c281a451ffac843b8302b41761cab0ba330aa3",
+      "firmwareCatalogSha256": "52922c30e79a10416e08f27539ea1591850a36cdc7e91427df238fe50ac84807",
+      "stationListSha256": "025b94d3477f9146662d9479cca60eacdc5ffedc9ca750336f6d784455f694c3",
+      "stationIdentitiesSha256": "de5ad2991e52db3c3eb10b96686407b953cb95dea3de3b7792d1cc3534d4b914",
+      "configSchemaSha256": "8c87737fedc11667fd346683d5cabd90f743b7b80c49b9f7994991c8283b63bc",
+      "configSchemaVersion": 2,
+      "logoPackRequired": true,
+      "stationCount": 9,
+      "note": "Frozen surface of the boot-silence fix: single profile retries before masking, one blind attempt covers scan misses."
+    },
+    "wifi-direct-0-2-v10": {
+      "baselineSourceCommit": "028b3a4c77bab82112f6cf88dfde7220a0470ef9",
+      "rendererSourceSha256": "76eac017429230b0ef73cfd8be46db6c94126b7f2fbec150951648a9daf620e2",
+      "rendererInterfaceSha256": "f3d990e4b1815a4070a529da40f6e5d22c81c40147f4595fc0056e1cbd4c916c",
+      "rendererContractSha256": "3bdfa297f5d0165bef2e9266f9c281a451ffac843b8302b41761cab0ba330aa3",
+      "firmwareCatalogSha256": "52922c30e79a10416e08f27539ea1591850a36cdc7e91427df238fe50ac84807",
+      "stationListSha256": "025b94d3477f9146662d9479cca60eacdc5ffedc9ca750336f6d784455f694c3",
+      "stationIdentitiesSha256": "de5ad2991e52db3c3eb10b96686407b953cb95dea3de3b7792d1cc3534d4b914",
+      "configSchemaSha256": "8c87737fedc11667fd346683d5cabd90f743b7b80c49b9f7994991c8283b63bc",
+      "configSchemaVersion": 2,
+      "logoPackRequired": true,
+      "stationCount": 9,
+      "note": "Frozen surface of the direct-connect fix: single known profile connects with no pre-connect scan, rejected associations cut at 6 s."
+    },
+    "radio-first-0-2-v11": {
+      "baselineSourceCommit": "05d1ce4b8ef7ead4308003606cde2a3bf43d2f0b",
+      "rendererSourceSha256": "76eac017429230b0ef73cfd8be46db6c94126b7f2fbec150951648a9daf620e2",
+      "rendererInterfaceSha256": "f3d990e4b1815a4070a529da40f6e5d22c81c40147f4595fc0056e1cbd4c916c",
+      "rendererContractSha256": "3bdfa297f5d0165bef2e9266f9c281a451ffac843b8302b41761cab0ba330aa3",
+      "firmwareCatalogSha256": "52922c30e79a10416e08f27539ea1591850a36cdc7e91427df238fe50ac84807",
+      "stationListSha256": "025b94d3477f9146662d9479cca60eacdc5ffedc9ca750336f6d784455f694c3",
+      "stationIdentitiesSha256": "de5ad2991e52db3c3eb10b96686407b953cb95dea3de3b7792d1cc3534d4b914",
+      "configSchemaSha256": "8c87737fedc11667fd346683d5cabd90f743b7b80c49b9f7994991c8283b63bc",
+      "configSchemaVersion": 2,
+      "logoPackRequired": true,
+      "stationCount": 9,
+      "note": "Frozen surface of the radio-first fix: playback starts on connect, logos fetch in the background pre-Bluetooth, wizard default-nine advances instantly."
+    },
+    "audited-0-2-v12": {
+      "baselineSourceCommit": "6cbd707428e09c404843530ca24edf3d11881d44",
+      "rendererSourceSha256": "76eac017429230b0ef73cfd8be46db6c94126b7f2fbec150951648a9daf620e2",
+      "rendererInterfaceSha256": "f3d990e4b1815a4070a529da40f6e5d22c81c40147f4595fc0056e1cbd4c916c",
+      "rendererContractSha256": "3bdfa297f5d0165bef2e9266f9c281a451ffac843b8302b41761cab0ba330aa3",
+      "firmwareCatalogSha256": "52922c30e79a10416e08f27539ea1591850a36cdc7e91427df238fe50ac84807",
+      "stationListSha256": "025b94d3477f9146662d9479cca60eacdc5ffedc9ca750336f6d784455f694c3",
+      "stationIdentitiesSha256": "de5ad2991e52db3c3eb10b96686407b953cb95dea3de3b7792d1cc3534d4b914",
+      "configSchemaSha256": "8c87737fedc11667fd346683d5cabd90f743b7b80c49b9f7994991c8283b63bc",
+      "configSchemaVersion": 2,
+      "logoPackRequired": true,
+      "stationCount": 9,
+      "note": "Frozen surface of the audited build: noise-safe logo pass, bounded TLS handshake, portal/console tap priority resolved."
+    },
+    "portal-keepalive-0-2-v13": {
+      "baselineSourceCommit": "709c71295a60fb076f20b12e06e52b63b1c14545",
+      "rendererSourceSha256": "76eac017429230b0ef73cfd8be46db6c94126b7f2fbec150951648a9daf620e2",
+      "rendererInterfaceSha256": "f3d990e4b1815a4070a529da40f6e5d22c81c40147f4595fc0056e1cbd4c916c",
+      "rendererContractSha256": "3bdfa297f5d0165bef2e9266f9c281a451ffac843b8302b41761cab0ba330aa3",
+      "firmwareCatalogSha256": "52922c30e79a10416e08f27539ea1591850a36cdc7e91427df238fe50ac84807",
+      "stationListSha256": "025b94d3477f9146662d9479cca60eacdc5ffedc9ca750336f6d784455f694c3",
+      "stationIdentitiesSha256": "de5ad2991e52db3c3eb10b96686407b953cb95dea3de3b7792d1cc3534d4b914",
+      "configSchemaSha256": "8c87737fedc11667fd346683d5cabd90f743b7b80c49b9f7994991c8283b63bc",
+      "configSchemaVersion": 2,
+      "logoPackRequired": true,
+      "stationCount": 9,
+      "note": "Frozen surface of the portal keep-alive fix: an unprovisioned device never idles its setup portal out."
+    },
+    "logo-task-0-2-v14": {
+      "baselineSourceCommit": "13df2d09472a8376741971dd31196d5b117db1b3",
+      "rendererSourceSha256": "76eac017429230b0ef73cfd8be46db6c94126b7f2fbec150951648a9daf620e2",
+      "rendererInterfaceSha256": "f3d990e4b1815a4070a529da40f6e5d22c81c40147f4595fc0056e1cbd4c916c",
+      "rendererContractSha256": "3bdfa297f5d0165bef2e9266f9c281a451ffac843b8302b41761cab0ba330aa3",
+      "firmwareCatalogSha256": "52922c30e79a10416e08f27539ea1591850a36cdc7e91427df238fe50ac84807",
+      "stationListSha256": "025b94d3477f9146662d9479cca60eacdc5ffedc9ca750336f6d784455f694c3",
+      "stationIdentitiesSha256": "de5ad2991e52db3c3eb10b96686407b953cb95dea3de3b7792d1cc3534d4b914",
+      "configSchemaSha256": "8c87737fedc11667fd346683d5cabd90f743b7b80c49b9f7994991c8283b63bc",
+      "configSchemaVersion": 2,
+      "logoPackRequired": true,
+      "stationCount": 9,
+      "note": "Frozen surface of the logo-task build: fetch on its own core with redirects, 15 s BT discovery retry."
+    },
+    "logo-passes-0-2-v15": {
+      "baselineSourceCommit": "b39f58886de909ac5a15d2e5e5c3da798172a08b",
+      "rendererSourceSha256": "76eac017429230b0ef73cfd8be46db6c94126b7f2fbec150951648a9daf620e2",
+      "rendererInterfaceSha256": "f3d990e4b1815a4070a529da40f6e5d22c81c40147f4595fc0056e1cbd4c916c",
+      "rendererContractSha256": "3bdfa297f5d0165bef2e9266f9c281a451ffac843b8302b41761cab0ba330aa3",
+      "firmwareCatalogSha256": "52922c30e79a10416e08f27539ea1591850a36cdc7e91427df238fe50ac84807",
+      "stationListSha256": "025b94d3477f9146662d9479cca60eacdc5ffedc9ca750336f6d784455f694c3",
+      "stationIdentitiesSha256": "de5ad2991e52db3c3eb10b96686407b953cb95dea3de3b7792d1cc3534d4b914",
+      "configSchemaSha256": "8c87737fedc11667fd346683d5cabd90f743b7b80c49b9f7994991c8283b63bc",
+      "configSchemaVersion": 2,
+      "logoPackRequired": true,
+      "stationCount": 9,
+      "note": "Frozen surface of the logo-diagnosis build: skip reasons in the log, three quiet-gap fetch passes per boot."
+    },
+    "release-0-2-v17": {
+      "baselineSourceCommit": "e9813a5b09a26971dd5665f2df49dc203becd98e",
+      "rendererSourceSha256": "76eac017429230b0ef73cfd8be46db6c94126b7f2fbec150951648a9daf620e2",
+      "rendererInterfaceSha256": "f3d990e4b1815a4070a529da40f6e5d22c81c40147f4595fc0056e1cbd4c916c",
+      "rendererContractSha256": "3bdfa297f5d0165bef2e9266f9c281a451ffac843b8302b41761cab0ba330aa3",
+      "firmwareCatalogSha256": "52922c30e79a10416e08f27539ea1591850a36cdc7e91427df238fe50ac84807",
+      "stationListSha256": "025b94d3477f9146662d9479cca60eacdc5ffedc9ca750336f6d784455f694c3",
+      "stationIdentitiesSha256": "de5ad2991e52db3c3eb10b96686407b953cb95dea3de3b7792d1cc3534d4b914",
+      "configSchemaSha256": "8c87737fedc11667fd346683d5cabd90f743b7b80c49b9f7994991c8283b63bc",
+      "configSchemaVersion": 2,
+      "logoPackRequired": true,
+      "stationCount": 9,
+      "note": "Frozen surface of release 0.2 (re-cut): single 96 KB logo download buffer allocated at begin()."
+    },
+    "release-0-2-v18": {
+      "baselineSourceCommit": "358b13d5a4b991a27c737953340e06197029fc74",
+      "rendererSourceSha256": "76eac017429230b0ef73cfd8be46db6c94126b7f2fbec150951648a9daf620e2",
+      "rendererInterfaceSha256": "f3d990e4b1815a4070a529da40f6e5d22c81c40147f4595fc0056e1cbd4c916c",
+      "rendererContractSha256": "3bdfa297f5d0165bef2e9266f9c281a451ffac843b8302b41761cab0ba330aa3",
+      "firmwareCatalogSha256": "52922c30e79a10416e08f27539ea1591850a36cdc7e91427df238fe50ac84807",
+      "stationListSha256": "025b94d3477f9146662d9479cca60eacdc5ffedc9ca750336f6d784455f694c3",
+      "stationIdentitiesSha256": "de5ad2991e52db3c3eb10b96686407b953cb95dea3de3b7792d1cc3534d4b914",
+      "configSchemaSha256": "8c87737fedc11667fd346683d5cabd90f743b7b80c49b9f7994991c8283b63bc",
+      "configSchemaVersion": 2,
+      "logoPackRequired": true,
+      "stationCount": 9,
+      "note": "Frozen surface of release 0.2 final cut: native decode + integer cover resample for small icons."
+    },
+    "release-0-2-1-v19": {
+      "baselineSourceCommit": "f9d402980345a5c041004db3276b9be11c18e74a",
+      "rendererSourceSha256": "9a60208b72e17b85a587b8673a3f8b55b62ac2e7ce756c55a69eaa0add5ff7a7",
+      "rendererInterfaceSha256": "f3d990e4b1815a4070a529da40f6e5d22c81c40147f4595fc0056e1cbd4c916c",
+      "rendererContractSha256": "3bdfa297f5d0165bef2e9266f9c281a451ffac843b8302b41761cab0ba330aa3",
+      "firmwareCatalogSha256": "52922c30e79a10416e08f27539ea1591850a36cdc7e91427df238fe50ac84807",
+      "stationListSha256": "025b94d3477f9146662d9479cca60eacdc5ffedc9ca750336f6d784455f694c3",
+      "stationIdentitiesSha256": "de5ad2991e52db3c3eb10b96686407b953cb95dea3de3b7792d1cc3534d4b914",
+      "configSchemaSha256": "8c87737fedc11667fd346683d5cabd90f743b7b80c49b9f7994991c8283b63bc",
+      "configSchemaVersion": 2,
+      "logoPackRequired": true,
+      "stationCount": 9,
+      "note": "Hotfix 0.2.1: SPIFFS format moved off the loop watchdog onto the logo task; factory/secure reset delete files instead of formatting. Fixes the factory-fresh boot loop reported from the field (Core2 v1.1, 2026-07-22)."
+    },
+    "release-0-2-1-v20": {
+      "baselineSourceCommit": "e4ec0c8d3e8a12407a983f6866e6be9750cfd6a8",
+      "rendererSourceSha256": "9a60208b72e17b85a587b8673a3f8b55b62ac2e7ce756c55a69eaa0add5ff7a7",
+      "rendererInterfaceSha256": "f3d990e4b1815a4070a529da40f6e5d22c81c40147f4595fc0056e1cbd4c916c",
+      "rendererContractSha256": "3bdfa297f5d0165bef2e9266f9c281a451ffac843b8302b41761cab0ba330aa3",
+      "firmwareCatalogSha256": "52922c30e79a10416e08f27539ea1591850a36cdc7e91427df238fe50ac84807",
+      "stationListSha256": "025b94d3477f9146662d9479cca60eacdc5ffedc9ca750336f6d784455f694c3",
+      "stationIdentitiesSha256": "de5ad2991e52db3c3eb10b96686407b953cb95dea3de3b7792d1cc3534d4b914",
+      "configSchemaSha256": "8c87737fedc11667fd346683d5cabd90f743b7b80c49b9f7994991c8283b63bc",
+      "configSchemaVersion": 2,
+      "logoPackRequired": true,
+      "stationCount": 9,
+      "note": "Hotfix 0.2.1 final: v19 (deferred SPIFFS format) plus URL-fragment strip in the stream source and a fragment-free catalog. Field reports 2026-07-22: factory boot loop (Core2 v1.1) and Eska Rock 400 from the console."
+    }
+  },
+  "approved": [
+    {
+      "sha256": "94c25a9e373f2bc0b3dabeaf4af19483362aa9486a7eafd638f25b2d9e562f12",
+      "byteSize": 2528976,
+      "sourceCommit": "44f19e49a64eeb2a9107f9e929e9577071623e32",
+      "lane": "core2-hardware-lab",
+      "role": "LEGACY_RECOVERY_IMAGE",
+      "surfaceId": "current-nine-station-logo-pack-v1",
+      "allowedPurposes": [
+        "RESTORE_LEGACY_SURFACE"
+      ],
+      "flashAllowed": true
+    },
+    {
+      "sha256": "44e9792983ff62b45c02dea5631c3599f7a8cb476da8728df82c940e1a61683a",
+      "byteSize": 2442368,
+      "sourceCommit": "f243453a96e8c60a5c84fd5f4f9cc50dba7f3fd7",
+      "lane": "core2-owner-production",
+      "role": "CURRENT_AUDIO_LKG_ROLLBACK",
+      "surfaceId": "current-nine-station-logo-pack-v1",
+      "allowedPurposes": [
+        "RESTORE_AUDIO_LKG"
+      ],
+      "flashAllowed": true
+    },
+    {
+      "sha256": "3e7a0cbdfc5cb5509ea2929430c047e812d86fbdd3ae8699998c7c7f847a9738",
+      "byteSize": 2448816,
+      "sourceCommit": "791ebd49d87d904a14956fa21688fbfe5fbff65e",
+      "lane": "core2-owner-production",
+      "role": "CURRENT_EXACT_RECOVERY_IMAGE",
+      "surfaceId": "current-nine-station-logo-pack-battery-v2",
+      "allowedPurposes": [
+        "RESTORE_CURRENT_SURFACE"
+      ],
+      "flashAllowed": true
+    },
+    {
+      "sha256": "659e56c236caad050e08220814839f7d395e410223c2cd05f373fc44fded28ba",
+      "byteSize": 2453264,
+      "sourceCommit": "97f3e9b305a8a6370cd2601a24c64a3efe0c4225",
+      "lane": "core2-owner-production",
+      "role": "FINAL_PRIVATE_CUBE_CANDIDATE",
+      "surfaceId": "current-nine-station-logo-pack-battery-noise-v3",
+      "allowedPurposes": [
+        "FLASH_OWNER_PRODUCTION"
+      ],
+      "flashAllowed": true
+    },
+    {
+      "sha256": "59eff7f5243d0c34d077fbdcd47864bb53643600df7de167a7280dcb0085d3f3",
+      "byteSize": 2419344,
+      "sourceCommit": "33b1145a4c2fae009cc66ce2caf0f545a0e31c7c",
+      "lane": "core2-owner-production",
+      "role": "RELEASE_0_2_OWNER_CANDIDATE",
+      "surfaceId": "measurement-0-2-192kbps-v5",
+      "allowedPurposes": [
+        "FLASH_OWNER_PRODUCTION"
+      ],
+      "flashAllowed": true
+    },
+    {
+      "sha256": "8f4a86e53fad1aae2b2713ca1c20e880e28878b732370ce54bb75e6212ca1ae9",
+      "byteSize": 2348320,
+      "sourceCommit": "921e795a03f76b233697d6b27636be9677e5f954",
+      "lane": "core2-public-candidate",
+      "role": "RELEASE_0_2_PUBLIC_CANDIDATE",
+      "surfaceId": "measurement-0-2-192kbps-v5",
+      "allowedPurposes": [
+        "FLASH_OWNER_PRODUCTION"
+      ],
+      "flashAllowed": true
+    },
+    {
+      "sha256": "9da5020cb71d4b1271241ca71b33ded0a29075e9cd586fcdbe04db0297dd20a1",
+      "byteSize": 2375920,
+      "sourceCommit": "33d0e227e02cdc02c3ac3232757c3d05726c50fe",
+      "lane": "core2-public-candidate",
+      "role": "RELEASE_0_2_PUBLIC_CANDIDATE",
+      "surfaceId": "block-a-close-0-2-v6",
+      "allowedPurposes": [
+        "FLASH_OWNER_PRODUCTION"
+      ],
+      "flashAllowed": true
+    },
+    {
+      "sha256": "49e2828cc327131f04bebd4aac5f9326fe724caa8adde4977d4698b3644cf6a9",
+      "byteSize": 2379728,
+      "sourceCommit": "67677bfa55ad7184b7d626a291e64701a541de24",
+      "lane": "core2-public-candidate",
+      "role": "RELEASE_0_2_PUBLIC_CANDIDATE",
+      "surfaceId": "console-fix-0-2-v7",
+      "allowedPurposes": [
+        "FLASH_OWNER_PRODUCTION"
+      ],
+      "flashAllowed": true
+    },
+    {
+      "sha256": "0ce344c7eba7d528b2e87fd02725ee703e4873ddca1abb54b399ab8e40c6ecf0",
+      "byteSize": 2380768,
+      "sourceCommit": "8cc11d8ad7cbd73a1c0f5b700ae0d92b2cbc86b5",
+      "lane": "core2-public-candidate",
+      "role": "RELEASE_0_2_PUBLIC_CANDIDATE",
+      "surfaceId": "console-qr-0-2-v8",
+      "allowedPurposes": [
+        "FLASH_OWNER_PRODUCTION"
+      ],
+      "flashAllowed": true
+    },
+    {
+      "sha256": "c666258330097cb077a3ff63d270b552df7b0bd8078a94f1db51e8c77e407e23",
+      "byteSize": 2380800,
+      "sourceCommit": "567487dba6a04a732998d3f9b3c758bd7d2c862b",
+      "lane": "core2-public-candidate",
+      "role": "RELEASE_0_2_PUBLIC_CANDIDATE",
+      "surfaceId": "wifi-retry-0-2-v9",
+      "allowedPurposes": [
+        "FLASH_OWNER_PRODUCTION"
+      ],
+      "flashAllowed": true
+    },
+    {
+      "sha256": "e95634d8fb68deaa0da771bd1277acc09d124c1684e161a5133751232c34cd99",
+      "byteSize": 2380992,
+      "sourceCommit": "028b3a4c77bab82112f6cf88dfde7220a0470ef9",
+      "lane": "core2-public-candidate",
+      "role": "RELEASE_0_2_PUBLIC_CANDIDATE",
+      "surfaceId": "wifi-direct-0-2-v10",
+      "allowedPurposes": [
+        "FLASH_OWNER_PRODUCTION"
+      ],
+      "flashAllowed": true
+    },
+    {
+      "sha256": "bfee8eeca494dd90bcc7fcf4f95d0776828e68b6aeda1c0b921be6ae0a4f3fb2",
+      "byteSize": 2381376,
+      "sourceCommit": "05d1ce4b8ef7ead4308003606cde2a3bf43d2f0b",
+      "lane": "core2-public-candidate",
+      "role": "RELEASE_0_2_PUBLIC_CANDIDATE",
+      "surfaceId": "radio-first-0-2-v11",
+      "allowedPurposes": [
+        "FLASH_OWNER_PRODUCTION"
+      ],
+      "flashAllowed": true
+    },
+    {
+      "sha256": "e6a2bce4ec6d3a1384b0f13ce97d8ce5669c119e828b6df9e175bb21709638cf",
+      "byteSize": 2381456,
+      "sourceCommit": "6cbd707428e09c404843530ca24edf3d11881d44",
+      "lane": "core2-public-candidate",
+      "role": "RELEASE_0_2_PUBLIC_CANDIDATE",
+      "surfaceId": "audited-0-2-v12",
+      "allowedPurposes": [
+        "FLASH_OWNER_PRODUCTION"
+      ],
+      "flashAllowed": true
+    },
+    {
+      "sha256": "ad1d8540b940f96040ba78f819087605b7e29bafd28c6c957de6657fe06ed419",
+      "byteSize": 2381472,
+      "sourceCommit": "709c71295a60fb076f20b12e06e52b63b1c14545",
+      "lane": "core2-public-candidate",
+      "role": "RELEASE_0_2_PUBLIC_CANDIDATE",
+      "surfaceId": "portal-keepalive-0-2-v13",
+      "allowedPurposes": [
+        "FLASH_OWNER_PRODUCTION"
+      ],
+      "flashAllowed": true
+    },
+    {
+      "sha256": "983465f674a9f117bcc688909e9d9549bd1976b86762069b93f98558ec76d621",
+      "byteSize": 2381552,
+      "sourceCommit": "13df2d09472a8376741971dd31196d5b117db1b3",
+      "lane": "core2-public-candidate",
+      "role": "RELEASE_0_2_PUBLIC_CANDIDATE",
+      "surfaceId": "logo-task-0-2-v14",
+      "allowedPurposes": [
+        "FLASH_OWNER_PRODUCTION"
+      ],
+      "flashAllowed": true
+    },
+    {
+      "sha256": "37681cd977a5237023c003f07ba21af259badde2391e72dcd7b977a16376752b",
+      "byteSize": 2381856,
+      "sourceCommit": "b39f58886de909ac5a15d2e5e5c3da798172a08b",
+      "lane": "core2-public-candidate",
+      "role": "RELEASE_0_2_PUBLIC_CANDIDATE",
+      "surfaceId": "logo-passes-0-2-v15",
+      "allowedPurposes": [
+        "FLASH_OWNER_PRODUCTION"
+      ],
+      "flashAllowed": true
+    },
+    {
+      "sha256": "8807c0a5b943428e617874178af563c914c8d94f0742bf09a8870bbe2a4f8532",
+      "byteSize": 2381904,
+      "sourceCommit": "e9813a5b09a26971dd5665f2df49dc203becd98e",
+      "lane": "core2-public-candidate",
+      "role": "RELEASE_0_2_PUBLIC_CANDIDATE",
+      "surfaceId": "release-0-2-v17",
+      "allowedPurposes": [
+        "FLASH_OWNER_PRODUCTION"
+      ],
+      "flashAllowed": true
+    },
+    {
+      "sha256": "47bdac3424dceeb782ceffae097032f695548c3319f81b90c38cb21865bc6369",
+      "byteSize": 2382272,
+      "sourceCommit": "358b13d5a4b991a27c737953340e06197029fc74",
+      "lane": "core2-public-candidate",
+      "role": "RELEASE_0_2_PUBLIC_CANDIDATE",
+      "surfaceId": "release-0-2-v18",
+      "allowedPurposes": [
+        "FLASH_OWNER_PRODUCTION"
+      ],
+      "flashAllowed": true
+    },
+    {
+      "sha256": "aaeee63aaf5b5e7d950a79f93e28cc27acb58d5c9da3ad0f63d296581487ba6b",
+      "byteSize": 2382624,
+      "sourceCommit": "f9d402980345a5c041004db3276b9be11c18e74a",
+      "lane": "core2-public-candidate",
+      "role": "RELEASE_0_2_PUBLIC_CANDIDATE",
+      "surfaceId": "release-0-2-1-v19",
+      "allowedPurposes": [
+        "FLASH_OWNER_PRODUCTION"
+      ],
+      "flashAllowed": true,
+      "note": "Superseded same evening by v20 (fragment strip); flashed once for the SPIFFS-format smoke."
+    },
+    {
+      "sha256": "98f0477a655cd42db42f6c806c059af9b8c33e6b0cd2eb6cd9b40d5fc1f44555",
+      "byteSize": 2382624,
+      "sourceCommit": "e4ec0c8d3e8a12407a983f6866e6be9750cfd6a8",
+      "lane": "core2-public-candidate",
+      "role": "RELEASE_0_2_PUBLIC_CANDIDATE",
+      "surfaceId": "release-0-2-1-v20",
+      "allowedPurposes": [
+        "FLASH_OWNER_PRODUCTION"
+      ],
+      "flashAllowed": true
+    }
+  ],
+  "quarantined": [
+    {
+      "sha256": "77b16bc710ce20df9210c980682473f32f1b55c73ff43c57cb0140d251e67735",
+      "byteSize": 2453520,
+      "sourceCommit": "36fa11ad4c431d5904f59992c895b5c23ce48d59",
+      "reason": "BT_AUTO_CONNECT_REGRESSION_AFTER_NOISE_QUEUE_LATENCY_CHANGE"
+    },
+    {
+      "sha256": "6b01752fd9d20a540469693cfd3ccacd0589468a4313fef6d17041023c0b804d",
+      "byteSize": 2528992,
+      "sourceCommit": "b198e0a5854c7fb972a8e5122bc4a1cedecf8bcd",
+      "reason": "KNOWN_RMF_BT_PCM_STARVATION_BASELINE"
+    },
+    {
+      "sha256": "729444cc8343ed025837a63ab8673c6e364eec4ba324bf5266feea982ec6b5d5",
+      "byteSize": 2376960,
+      "sourceCommit": "ecd69dd18364a7233e7874d4040a1a30cd1b4a3e",
+      "reason": "OLD_GUI_AND_NO_CURRENT_LOGO_PACK"
+    },
+    {
+      "sha256": "88561ba7348958f2fbae59821150cce624e104a207f1af441399c972ad5dc562",
+      "byteSize": 2321584,
+      "sourceCommit": "735b616b0bc25995d6e585e5c2fa16ae8acdd06b",
+      "reason": "UNREVIEWED_WHOLE_APPLICATION_MIDPOINT"
+    },
+    {
+      "sha256": "a7ed7f1530ba0d1ec4afd1999a030861f188eefe0987b0861d5cb08e01120e5f",
+      "byteSize": 2446544,
+      "sourceCommit": "276a4d2fa91322b513c449d669fa0636ed299fb8",
+      "reason": "ASYNC_WIFI_SCAN_TIMEOUT_NO_PLAYBACK"
+    },
+    {
+      "sha256": "c74a1e14025376bab0a2f74c26b2a15456737f072c7c9b47e62ac9ffc1aa77f7",
+      "byteSize": 2446544,
+      "sourceCommit": "315a7709625851122a42ab73ae6fb19e1e7195cd",
+      "reason": "RMF_MP3_A2DP_BANDWIDTH_STARVATION"
+    },
+    {
+      "sha256": "a7ca02797dfbe9da5102df16fb1928a3a8d1dc9707fd6c10f8e3bab549ebde0a",
+      "byteSize": 2528928,
+      "sourceCommit": "72f839e8af6f2453d6314614834a2de44787fa04",
+      "reason": "RMF_AAC_RESAMPLER_STARVATION_AND_RTC_DOUBLE_CEST"
+    },
+    {
+      "sha256": "f2b89803f60a5cce88de3386d534b077c8ae7ec368f904c4a76f5648cafa63be",
+      "byteSize": 2529248,
+      "sourceCommit": "0f39a296ba6c7b4a14332af412a4ee1b8c28aa6f",
+      "reason": "RMF_AAC_BALANCED_COEX_INGEST_STARVATION"
+    },
+    {
+      "sha256": "726e106772dc456478019dcfc4b629394857409f9678b829bef19d79c82a5cc9",
+      "byteSize": 2529504,
+      "sourceCommit": "2f5918212115bac3c1e8fb9661fb308f67503730",
+      "reason": "RMF_AAC_COEX_TIMESLICE_STILL_STARVED_A2DP"
+    },
+    {
+      "sha256": "e46729737d7637a5be42e0235b63dd39e9a8999d936a58398f9a111d384945a2",
+      "byteSize": 2529776,
+      "sourceCommit": "3b5d27b899e66923d5b0d69b979d0afff4cdfa78",
+      "reason": "RADIO_ZET_MP3_BALANCED_INGEST_STARVATION_AFTER_SWITCH"
+    },
+    {
+      "sha256": "fbfc977fbad6b1ceffeb7b5566007517011c203232c5d4ac8bd135356feb7f49",
+      "byteSize": 2529200,
+      "sourceCommit": "a47f6a66167a183165c9914d5447711f18c9b3aa",
+      "reason": "RADIO_ZET_MP3_SCOPED_REFILL_STILL_BELOW_REALTIME"
+    },
+    {
+      "sha256": "eda2c800729f73776d1b811f3d560d0513d259550a6eaa5c7d2693433a8dc84f",
+      "byteSize": 2529360,
+      "sourceCommit": "ecf05b51fdec4e20d26f72c5133a5106ff7ac32b",
+      "reason": "LIVE_LOW_WATER_WATCHDOG_RESTARTED_CONNECTED_STREAMS"
+    },
+    {
+      "sha256": "91bf973c79c5c2d3dad008da77ec9348bc2d2e3052fa98a6f558a8bef08359ed",
+      "byteSize": 2529296,
+      "sourceCommit": "f7467bbd615d38464494198fac08e8b3dc072f4f",
+      "reason": "RADIO_ZET_AUDIBLE_DISTORTION_AFTER_RMF_PASS"
+    },
+    {
+      "sha256": "7b6f44b1536d0ab921de7f392016ff3861f042a1453066d694e53da8a4a55855",
+      "byteSize": 2441040,
+      "sourceCommit": "17a4723805badfbcb39956502310e806c9f4c562",
+      "reason": "EXACT_94C_SEMANTICS_STILL_RMF_INGEST_STARVATION"
+    }
+  ]
+}

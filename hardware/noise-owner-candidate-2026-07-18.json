@@ -1,0 +1,105 @@
+{
+  "schemaVersion": 1,
+  "status": "CONDITIONAL_QC_PASS_EXACT_APP0_ACCEPTED_CONTROL_LATENCY",
+  "createdAt": "2026-07-18T22:18:36+02:00",
+  "candidate": {
+    "role": "FINAL_PRIVATE_CUBE_CANDIDATE",
+    "lane": "core2-owner-production",
+    "sourceCommit": "97f3e9b305a8a6370cd2601a24c64a3efe0c4225",
+    "embeddedSourceCommit": "97f3e9b305a8a6370cd2601a24c64a3efe0c4225",
+    "imagePath": "output/flashed/owner-production-659e56c236caad050e08220814839f7d395e410223c2cd05f373fc44fded28ba.bin",
+    "sha256": "659e56c236caad050e08220814839f7d395e410223c2cd05f373fc44fded28ba",
+    "byteSize": 2453264,
+    "artifacts": {
+      "firmwareBinSha256": "659e56c236caad050e08220814839f7d395e410223c2cd05f373fc44fded28ba",
+      "firmwareElfSha256": "5d5633c4ce0442bb135a5f33ce2398c8c9023e6557a8213eb8fa4394e99fd1b8",
+      "firmwareMapSha256": "d43e65d978f213f7814e7f778b9ba5228a8a71b15bfbf95d6cc6b17864561e84",
+      "buildLogSha256": "27efe1ea8364d207a929b16903c3a435bf9955c66f728c30f08483b462a0996b"
+    }
+  },
+  "productSurface": {
+    "surfaceId": "current-nine-station-logo-pack-battery-noise-v3",
+    "rendererSourceSha256": "f75d3285edc6f05a9c91320074aadf646b9d3178a88b9abc6ea6615c2bd6957b",
+    "rendererInterfaceSha256": "480488816009360586e88cdc16ed14cd1de5175bd4ceaf4f9fb058d111466177",
+    "rendererContractSha256": "3cd1279ee46ff4fe11a31ed5808078ea83ac51e2097451bfc98d9c0eaa711c65",
+    "firmwareCatalogSha256": "82f185f855410a29855a11d69034791286eafd097a8714d50f0859769d375186",
+    "stationListSha256": "ac8292cdc640b81d456a89a0b10a2f1daf73458a64145c5e0302d976e7369b9f",
+    "stationIdentitiesSha256": "f50bf16494e6738a58a8da0bd72a84d6fbde91ac02502feaa73d43297234041f",
+    "configSchemaSha256": "8c87737fedc11667fd346683d5cabd90f743b7b80c49b9f7994991c8283b63bc",
+    "logoPackSha256": "310c5dfa0bb35fcf1feec5d8eb304b2d048430cb97ae3723943c2e8f14b20223",
+    "stationCount": 9,
+    "logoCount": 9,
+    "mp3Only": true,
+    "hlsIncluded": false,
+    "aacIncluded": false,
+    "labConsoleIncluded": false,
+    "noiseColors": ["WHITE", "PINK", "BROWN"],
+    "noiseSource": "LOCAL_SYNTHESIS_ONLY",
+    "noiseTargetRmsDbfs": -14,
+    "noiseOwnerLoopFrameLimit": 8192,
+    "noiseFadeInMs": 250,
+    "noiseFadeOutMs": 150
+  },
+  "frozenRadioGeometry": {
+    "decodedPcmFrames": 262144,
+    "bluetoothPcmFrames": 262144,
+    "bluetoothFallbackReserveFrames": 44100,
+    "wifiCoexistenceTuningChanged": false,
+    "radioResolverOrEndpointChanged": false
+  },
+  "buildQualification": {
+    "independentCleanBuilds": 2,
+    "applicationBytesIdentical": true,
+    "forbiddenHlsAacLabAndSbcWrapperSymbols": 0,
+    "requiredMp3DecoderSymbols": true,
+    "ramBytesUsed": 68692,
+    "flashBytesUsed": 2446681,
+    "flashPartitionBytes": 6553600,
+    "focusedFirmwareFaultMatrix": "22/22 PASS",
+    "firmwareHostTests": "PASS INCLUDING LOCAL_NOISE_3/3",
+    "uiControllerTests": "12/12 PASS",
+    "rendererTests": "19/19 PASS; 29 SCREENS; 116 VARIANTS",
+    "rendererDeterminism": "PASS_116_CASES",
+    "uiControllerParity": "PASS_8_SCENARIOS_61_SNAPSHOTS",
+    "docsParity": "PASS",
+    "gitDiffCheck": "PASS"
+  },
+  "rollback": {
+    "role": "CURRENT_EXACT_RECOVERY_IMAGE",
+    "sha256": "3e7a0cbdfc5cb5509ea2929430c047e812d86fbdd3ae8699998c7c7f847a9738",
+    "byteSize": 2448816,
+    "sourceCommit": "791ebd49d87d904a14956fa21688fbfe5fbff65e",
+    "allowedPurpose": "RESTORE_CURRENT_SURFACE",
+    "qualification": "EXACT_RMF_300S_ZET_180S_RMF_RETURN_120S_OWNER_IDEALNIE"
+  },
+  "rejectedSuccessor": {
+    "sha256": "77b16bc710ce20df9210c980682473f32f1b55c73ff43c57cb0140d251e67735",
+    "sourceCommit": "36fa11ad4c431d5904f59992c895b5c23ce48d59",
+    "reason": "BT_AUTO_CONNECT_REGRESSION_AFTER_NOISE_QUEUE_LATENCY_CHANGE",
+    "evidence": "output/hardware-soaks/2026-07-18T20-43-43.368Z-noise-low-latency-controls.json"
+  },
+  "flashGate": {
+    "flashAllowed": true,
+    "registryStatus": "APPROVED_EXACT_SHA_AND_PURPOSE",
+    "ownerApproval": "GIVEN_2026-07-18",
+    "requiredActiveSlot": "app0",
+    "writeScope": "APP0_ONLY",
+    "livePartitionAndOtaPreflight": "PASS_ACTIVE_APP0_2026-07-18T22:51+02:00",
+    "postWriteVerifyFlash": "PASS_DIGEST_MATCHED",
+    "bootShaVerification": "PASS_CAPTURE_EXACT_ARTIFACT"
+  },
+  "physicalQualification": {
+    "noiseBluetoothAudible": "OWNER_CONFIRMED_WHITE_NOISE_EFFECT_OK",
+    "noiseBuiltInSpeakerAudible": "NOT_SEPARATELY_QUALIFIED",
+    "noiseColorAndStopClickCheck": "PASS_WITH_OWNER_ACCEPTED_MULTI_SECOND_QUEUE_LATENCY",
+    "noiseSoak600Seconds": "STOPPED_BY_OWNER_AFTER_240S_STEADY_WINDOW_WITH_ZERO_AUDIO_ERROR_DELTAS",
+    "noiseEvidence": "output/hardware-soaks/2026-07-18T20-26-28.851Z-noise-bt-600s.json",
+    "controlEvidence": "output/hardware-soaks/2026-07-18T20-32-02.640Z-noise-colors-controls.json",
+    "radioRmfAfterNoise": "CONDITIONAL_PASS_AUTO_BT_MEDIA_STARTED_ONE_ATTEMPT_ZERO_STARVATIONS",
+    "radioAutoBtEvidence": "output/hardware-soaks/2026-07-18T20-52-58.365Z-noise-rollback-auto-bt.json",
+    "radioZetAfterNoise": "NOT_REPEATED_AFTER_ROLLBACK",
+    "conditionalQcPass": true,
+    "privateCubeFinal": false,
+    "h4Pass": false
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "schemaVersion": 1,
+  "reportType": "CALLBACK_REPLAY",
+  "firmwareSha256": "98f0477a655cd42db42f6c806c059af9b8c33e6b0cd2eb6cd9b40d5fc1f44555",
+  "traceId": "schema-rejection",
+  "facts": [
+    {"producer": "POWER", "epoch": 1, "producerSequence": 1, "rawTick": 1, "type": "POWER_INTERRUPTED", "unexpected": 1}
+  ]
+}

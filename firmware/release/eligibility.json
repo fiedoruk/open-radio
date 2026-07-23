@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "source": {
+    "status": "RELEASED",
+    "reason": "GPL-3.0-or-later project source with a GPL/MIT/Apache dependency graph; the corresponding-source bundle for 0.2.1 ships alongside the binary and notices remain mandatory."
+  },
+  "binary": {
+    "status": "RELEASED",
+    "reason": "0.2.1 is the current public image (full 295ca3fd…, app 98f0477a…), hardware-validated on Core2 v1.0 (owner smoke) and v1.1 (external field confirmation); endurance and battery qualification remain open and are disclosed in docs/116."
+  },
+  "adfReference": {
+    "status": "PRIVATE_REFERENCE_ONLY",
+    "reason": "Large graph and prebuilt codec/service components require exact per-artifact clearance."
+  },
+  "publicationPerformed": true
+}

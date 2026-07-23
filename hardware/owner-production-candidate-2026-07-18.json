@@ -1,0 +1,202 @@
+{
+  "schemaVersion": 1,
+  "status": "CONDITIONAL_QC_PASS_EXACT_APP0",
+  "createdAt": "2026-07-18T20:31:00+02:00",
+  "productionDeadline": "2026-07-18T22:00:00+02:00",
+  "candidate": {
+    "role": "FINAL_PRIVATE_CUBE_CANDIDATE",
+    "lane": "core2-owner-production",
+    "sourceCommit": "791ebd49d87d904a14956fa21688fbfe5fbff65e",
+    "embeddedSourceCommit": "791ebd49d87d904a14956fa21688fbfe5fbff65e",
+    "imagePath": "output/flashed/owner-production-3e7a0cbdfc5cb5509ea2929430c047e812d86fbdd3ae8699998c7c7f847a9738.bin",
+    "sha256": "3e7a0cbdfc5cb5509ea2929430c047e812d86fbdd3ae8699998c7c7f847a9738",
+    "byteSize": 2448816,
+    "artifacts": {
+      "firmwareBinSha256": "3e7a0cbdfc5cb5509ea2929430c047e812d86fbdd3ae8699998c7c7f847a9738",
+      "firmwareElfSha256": "31580364e070d2b806c0b8a669481301b4d86e5f6697292856cb7164deb0e61d",
+      "firmwareMapSha256": "4b92695e5b8399e52396650bf654f2343502c1b42535b8ef5f59d037c96fb00f",
+      "buildLogSha256": "2acdbcbc0f9e7de5ab2765bac11145346d5bf0b40fc40fe1e4c0bd332ad13b34"
+    }
+  },
+  "preservedAudioLkg": {
+    "sha256": "44e9792983ff62b45c02dea5631c3599f7a8cb476da8728df82c940e1a61683a",
+    "sourceCommit": "f243453a96e8c60a5c84fd5f4f9cc50dba7f3fd7",
+    "role": "CURRENT_AUDIO_LKG_ROLLBACK",
+    "allowedPurpose": "RESTORE_AUDIO_LKG",
+    "result": "PRESERVED_SEPARATELY_FROM_SETTINGS_BATTERY_CANDIDATE",
+    "evidencePath": "output/hardware-soaks/2026-07-18T18-12-04.471Z-async-prefetch-rmf-volume.json",
+    "evidenceBasis": "EXACT_PREDECESSOR_RMF_ZET_RMF_AND_VOLUME_COUNTER_PASS_OWNER_AUDIBLE_OK"
+  },
+  "productSurface": {
+    "surfaceId": "current-nine-station-logo-pack-battery-v2",
+    "rendererSourceSha256": "888d656f36a95a552b5711821c5f7403f8c9349e58aef00f976fe7f493342ac8",
+    "rendererInterfaceSha256": "c1deee1916a94be9ec04cef3c73f91134e6e77bc9d3c032325226b03d9bd40b5",
+    "rendererContractSha256": "3cd1279ee46ff4fe11a31ed5808078ea83ac51e2097451bfc98d9c0eaa711c65",
+    "firmwareCatalogSha256": "82f185f855410a29855a11d69034791286eafd097a8714d50f0859769d375186",
+    "stationListSha256": "ac8292cdc640b81d456a89a0b10a2f1daf73458a64145c5e0302d976e7369b9f",
+    "stationIdentitiesSha256": "f50bf16494e6738a58a8da0bd72a84d6fbde91ac02502feaa73d43297234041f",
+    "configSchemaSha256": "8c87737fedc11667fd346683d5cabd90f743b7b80c49b9f7994991c8283b63bc",
+    "configSchemaVersion": 2,
+    "logoPackSha256": "310c5dfa0bb35fcf1feec5d8eb304b2d048430cb97ae3723943c2e8f14b20223",
+    "stationCount": 9,
+    "logoCount": 9,
+    "mp3Only": true,
+    "hlsIncluded": false,
+    "aacIncluded": false,
+    "labConsoleIncluded": false,
+    "rmfOwnerCodecPreference": "MP3_ASYNC_ICY_PREFETCH_128_KIB",
+    "radioZetOwnerCodecPreference": "MP3_ASYNC_ICY_PREFETCH_128_KIB",
+    "publicCandidateMp3Only": true,
+    "settingsHeader": "BATTERY_PERCENT_VOLTAGE_CURRENT_AND_SMOOTHED_RUNTIME",
+    "batteryReadIntervalMs": 10000
+  },
+  "behaviorContracts": [
+    {
+      "name": "bluetooth-profile-open-single-flight-observed-generation-fencing",
+      "commits": [
+        "a772c92861d3fa1215b9a767eb91c72610e0c982",
+        "6ee0cd18b49c30c850c09df77380971916d4f208",
+        "276a4d2fa91322b513c449d669fa0636ed299fb8"
+      ]
+    },
+    {
+      "name": "baseline-94c-pcm-transfer-and-mp3-playback-semantics",
+      "commits": [
+        "44f19e49a64eeb2a9107f9e929e9577071623e32",
+        "17a4723805badfbcb39956502310e806c9f4c562"
+      ]
+    },
+    {
+      "name": "bounded-async-icy-prefetch-outside-audio-owner-loop",
+      "commits": [
+        "f243453a96e8c60a5c84fd5f4f9cc50dba7f3fd7"
+      ]
+    },
+    {
+      "name": "utc-rtc-persistence-after-fresh-sntp",
+      "commits": [
+        "17a4723805badfbcb39956502310e806c9f4c562"
+      ]
+    },
+    {
+      "name": "large-wifi-setup-qr-for-onboarding-and-additional-networks",
+      "commits": [
+        "17a4723805badfbcb39956502310e806c9f4c562"
+      ]
+    },
+    {
+      "name": "low-rate-settings-only-pmic-battery-status",
+      "commits": [
+        "791ebd49d87d904a14956fa21688fbfe5fbff65e"
+      ]
+    }
+  ],
+  "frozenAudioGeometry": {
+    "decodedPcmFrames": 262144,
+    "bluetoothPcmFrames": 262144,
+    "bluetoothFallbackReserveFrames": 44100,
+    "changedByCandidate": false
+  },
+  "buildQualification": {
+    "independentCleanBuilds": 2,
+    "applicationBytesIdentical": true,
+    "forbiddenHlsAacLabAndSbcWrapperSymbols": 0,
+    "requiredMp3DecoderSymbols": true,
+    "compressedInputRingBytes": 131072,
+    "compressedInputWorkerCore": 0,
+    "compressedInputWorkerPriority": 1,
+    "ramBytesUsed": 68644,
+    "flashBytesUsed": 2442241,
+    "flashPartitionBytes": 6553600
+  },
+  "softwareQualification": {
+    "npmRunCheck": "PASS_FINAL_RECONCILIATION",
+    "nodeTests": "210/210 PASS",
+    "focusedFirmwareFaultMatrix": "21/21 PASS",
+    "bluetoothProfileGateCases": "5/5 PASS",
+    "ownerProductionBuild": "PASS",
+    "sourceCommitRehearsalFiles": 440,
+    "sourceCommitRehearsal": "PASS_EXACT_HASH_IN_OUTPUT_EVIDENCE_TO_AVOID_SELF_REFERENCE",
+    "communityKitSha256": "e9e849241a0df519f5a91dfb0ea0bdcae5a8e53d688f64865ff4128f0620c0ce",
+    "gitDiffCheck": "PASS_FINAL_RECONCILIATION"
+  },
+  "liveEndpointQualification": {
+    "checkedAt": "2026-07-18T17:47:00+02:00",
+    "rmfonDiscoveryIds": [5, 6, 29],
+    "rmfonDiscovery": "PASS_200_JSON_MP3_CANDIDATES_AVAILABLE",
+    "rmfPinnedFallbacks": "PASS_200_AUDIO_MPEG_MP3_SYNC_3_OF_3",
+    "radioZetMp3Fallback": "PASS_AUDIO_MPEG_128_KBPS"
+  },
+  "rollback": {
+    "role": "CURRENT_AUDIO_LKG_ROLLBACK",
+    "sha256": "44e9792983ff62b45c02dea5631c3599f7a8cb476da8728df82c940e1a61683a",
+    "byteSize": 2442368,
+    "sourceCommit": "f243453a96e8c60a5c84fd5f4f9cc50dba7f3fd7",
+    "allowedPurpose": "RESTORE_AUDIO_LKG",
+    "qualification": "FOCUSED_RMF_ZET_RMF_VOLUME_PASS_OWNER_AUDIBLE_IDEALNIE"
+  },
+  "legacyRecovery": {
+    "role": "CURRENT_EXACT_RECOVERY_IMAGE",
+    "sha256": "94c25a9e373f2bc0b3dabeaf4af19483362aa9486a7eafd638f25b2d9e562f12",
+    "byteSize": 2528976,
+    "sourceCommit": "44f19e49a64eeb2a9107f9e929e9577071623e32",
+    "allowedPurpose": "RESTORE_CURRENT_SURFACE",
+    "qualification": "RECOVERY_ONLY_KNOWN_RMF_INGEST_AND_60_MINUTE_FAIL"
+  },
+  "flashGate": {
+    "flashAllowed": true,
+    "registryStatus": "APPROVED_EXACT_SHA_AND_PURPOSE",
+    "ownerApproval": "GIVEN_IN_TASK_DO_NOT_ASK_FIX_IT_2026-07-18",
+    "deviceConnected": "SERIAL_PORT_DETECTED",
+    "livePartitionAndOtaPreflight": "PASS_EXACT_FINAL_ACTIVE_APP0",
+    "requiredActiveSlot": "app0",
+    "writeScope": "APP0_ONLY",
+    "postWriteVerifyFlash": "PASS_DIGEST_MATCHED",
+    "bootShaVerification": "PASS_791EBD49_FROM_FINAL_CAPTURE"
+  },
+  "physicalQualification": {
+    "predecessorAudioArchitecture": {
+      "sha256": "44e9792983ff62b45c02dea5631c3599f7a8cb476da8728df82c940e1a61683a",
+      "differenceFromCandidate": "SETTINGS_ONLY_PMIC_TELEMETRY_AND_RENDERER_HEADER",
+      "rmfSteady300Seconds": "PASS_COUNTERS",
+      "radioZetSteady300Seconds": "PASS_COUNTERS",
+      "rmfReturn300Seconds": "PASS_COUNTERS_OWNER_OK",
+      "rmfVolume300Seconds": "PASS_COUNTERS_OWNER_IDEALNIE",
+      "passiveSixtyMinuteRmf": "PASS_ONE_BOUNDED_STREAM_REOPEN_ZERO_OUTPUT_SILENCE",
+      "passiveSixtyMinuteEvidence": "output/hardware-soaks/2026-07-18T18-17-32.768Z-async-prefetch-rmf-endurance-60m.json"
+    },
+    "focusedBluetoothRecovery": "NOT_RUN_EXACT_NEW_IMAGE",
+    "rmfStations": "PASS_RMF_FM_300_SECONDS_ZERO_OUTPUT_FAILURE_DELTAS",
+    "rmfEvidence": "output/hardware-soaks/2026-07-18T19-20-54.814Z-final-battery-rmf.json",
+    "radioZetSwitchAwayAndBack": "PASS_ZET_180_SECONDS_AND_RMF_RETURN_120_SECONDS_BOUNDED_SWITCH_GAP",
+    "radioZetEvidence": "output/hardware-soaks/2026-07-18T19-33-51.038Z-final-battery-zet-after-usb-bridge.json",
+    "rmfReturnEvidence": "output/hardware-soaks/2026-07-18T19-39-09.407Z-final-battery-rmf-return.json",
+    "switchGap": "ONE_TIME_62208_ACTIVE_AND_7808_IDLE_SILENCE_FRAMES_BEFORE_SETTLED_RMF_WINDOW",
+    "allNineStations": "NOT_RUN",
+    "streamRecovery5Of5": "NOT_RUN",
+    "wifiRecovery5Of5": "NOT_RUN",
+    "bluetoothFallbackAndReturn3Of3": "NOT_RUN",
+    "touchAndUiDuringRecovery": "CONDITIONAL_OWNER_REPORTED_TRANSIENT_LOW_RESPONSIVENESS_UI_TICK_1MS_UI_FLUSH_107MS_AUDIO_LOOP_1411MS",
+    "pmuBatteryUsbPowerbankSdAndEnclosure": "ACCIDENTAL_USB_UNPLUG_RECOVERED_NO_RESET_NOT_A_FORMAL_BRIDGE_PASS",
+    "sixtyMinuteEndurance": "NOT_RUN_EXACT_NEW_IMAGE",
+    "twoHourEndurance": "NOT_RUN",
+    "eightHourEndurance": "NOT_RUN",
+    "privateCubeFinal": false,
+    "h4Pass": false
+  },
+  "dayCloseout": {
+    "verdict": "CONDITIONAL_QC_PASS",
+    "currentDeviceSha256": "3e7a0cbdfc5cb5509ea2929430c047e812d86fbdd3ae8699998c7c7f847a9738",
+    "audioLkgRollbackSha256": "44e9792983ff62b45c02dea5631c3599f7a8cb476da8728df82c940e1a61683a",
+    "exactFinalRmf": "PASS",
+    "exactFinalRadioZetReturn": "PASS_BOUNDED_SWITCH_GAP_AND_ZERO_SETTLED_FAILURE_DELTAS",
+    "settingsHeaderVisual": "OPENED_OWNER_REPORTED_TRANSIENT_TOUCH_LAG_BATTERY_CONTENT_NOT_EXPLICITLY_CONFIRMED",
+    "safeRepositoryExit": "PASS_AFTER_REQUIRED_FINAL_COMMIT"
+  },
+  "deadlineFeasibility": {
+    "softwareAndProductionPreparationCanFinishByDeadline": true,
+    "focusedSixtyMinuteAndTwoHourRunsRequireImmediateDeviceApproval": false,
+    "eightHourGateCanFinishByDeadline": false,
+    "reason": "The exact final image completed focused RMF, Radio ZET and return RMF before 22:00. Its own 60-minute, forced-recovery, two-hour and eight-hour gates remain separate honest rows, so the day closes as a conditional QC pass."
+  }
+}

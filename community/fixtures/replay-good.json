@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "reportType": "CALLBACK_REPLAY",
+  "firmwareSha256": "98f0477a655cd42db42f6c806c059af9b8c33e6b0cd2eb6cd9b40d5fc1f44555",
+  "traceId": "healthy-classic-a2dp",
+  "facts": [
+    {"producer": "STORAGE", "epoch": 1, "producerSequence": 1, "rawTick": 100, "type": "CONFIG_READY"},
+    {"producer": "LOCAL_OUTPUT", "epoch": 1, "producerSequence": 1, "rawTick": 101, "type": "LOCAL_OUTPUT_AVAILABLE"},
+    {"producer": "WIFI", "epoch": 1, "producerSequence": 1, "rawTick": 102, "type": "WIFI_CONNECTED"},
+    {"producer": "RESOLVER", "epoch": 1, "producerSequence": 1, "rawTick": 103, "type": "RESOLVER_READY"},
+    {"producer": "STREAM", "epoch": 1, "producerSequence": 1, "rawTick": 104, "type": "STREAM_HEALTHY"},
+    {"producer": "BLUETOOTH", "epoch": 1, "producerSequence": 1, "rawTick": 105, "type": "BLUETOOTH_REMEMBERED"},
+    {"producer": "BLUETOOTH", "epoch": 1, "producerSequence": 2, "rawTick": 106, "type": "BLUETOOTH_CONNECTED"}
+  ]
+}

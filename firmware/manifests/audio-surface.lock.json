@@ -1,0 +1,71 @@
+{
+  "schemaVersion": 1,
+  "frozenAt": "open-radio-0-1",
+  "verifiedIdenticalToTag": "2026-07-21",
+  "rationale": "Release 0.2 changes the catalog, not the sound. Every file here was byte-identical to tag open-radio-0-1 when the lock was created.",
+  "files": [
+    {
+      "path": "firmware/public-candidate/src/public_audio_pipeline.hpp",
+      "sha256": "a2623c650f1b63c8d1655c87caa7b8c565019a1d30f76c37da0d807742dcc24e"
+    },
+    {
+      "path": "firmware/public-candidate/src/async_icy_stream_source.hpp",
+      "sha256": "62bbac547234f2482a556002458be1fa6209b1c5db0f99301171b90ecac844d1"
+    },
+    {
+      "path": "firmware/public-candidate/src/hls_aac_source.hpp",
+      "sha256": "f55d5c35835d8de75eb9e345483caf077acd0184ffacd8b67e6053490c297e6a"
+    },
+    {
+      "path": "firmware/common/include/open_radio/spsc_byte_ring.hpp",
+      "sha256": "fd08fce18a3a55bc4380230defc26749b12d826aeb348f3fce6bebb3e6f41f39"
+    },
+    {
+      "path": "firmware/common/include/open_radio/bluetooth_profile_gate.hpp",
+      "sha256": "b39deb9764f452faed622a1bb5a9123f95341f046199cc466387c6ad525742d2"
+    },
+    {
+      "path": "firmware/common/include/open_radio/local_noise_source.hpp",
+      "sha256": "1d0f71ee6e257f7b866f9de5575402832c2c56ae909b6142fa921c56f48bd3ad"
+    },
+    {
+      "path": "firmware/public-candidate/src/device_network_runtime.hpp",
+      "sha256": "e36ff2a31c1ea3584e6dff962241202505d934909949503e5d9d840c63472677"
+    },
+    {
+      "path": "firmware/public-candidate/src/logo_store.hpp",
+      "sha256": "7a3228e2f27ae7a62b0fc13bff39630e3a6d0b1f0408fea0b92c647455f4bdd8"
+    },
+    {
+      "path": "firmware/public-candidate/src/station_runtime.hpp",
+      "sha256": "f8bc20670a0ef4bf4ebfeb5b73a8e05557893fd203dc4e92277e7ba7147cc925"
+    },
+    {
+      "path": "firmware/public-candidate/src/station_slots.hpp",
+      "sha256": "0ecdfc85442c6df691c0af8101a3ea7a851aeea52df1cab355ee2a1102a4c58e"
+    }
+  ],
+  "invariants": [
+    {
+      "path": "firmware/public-candidate/src/main.cpp",
+      "requiredSubstring": "esp_coex_preference_set(ESP_COEX_PREFER_BALANCE)",
+      "reason": "PREFER_WIFI starved A2DP TX on the weaker speaker link; BALANCE was chosen after an owner A/B on 2026-07-17"
+    },
+    {
+      "path": "firmware/public-candidate/src/public_audio_pipeline.hpp",
+      "requiredSubstring": "kFramesPerOwnerLoop = 8192",
+      "reason": "tripling this budget lengthened loop runs and broke touch without adding a single frame"
+    },
+    {
+      "path": "firmware/public-candidate/src/public_audio_pipeline.hpp",
+      "requiredSubstring": "kDecodedPcmFrames = 262144",
+      "reason": "burst-equilibrium reserve; every threshold in docs/104 sits below it"
+    },
+    {
+      "path": "firmware/public-candidate/src/public_audio_pipeline.hpp",
+      "requiredSubstring": "kBluetoothPcmFrames = 262144",
+      "reason": "burst-equilibrium reserve on the sink side"
+    }
+  ],
+  "exceptions": []
+}

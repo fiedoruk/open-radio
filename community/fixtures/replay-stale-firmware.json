@@ -1,0 +1,9 @@
+{
+  "schemaVersion": 1,
+  "reportType": "CALLBACK_REPLAY",
+  "firmwareSha256": "0000000000000000000000000000000000000000000000000000000000000000",
+  "traceId": "stale-firmware-evidence",
+  "facts": [
+    {"producer": "POWER", "epoch": 1, "producerSequence": 1, "rawTick": 1, "type": "POWER_INTERRUPTED"}
+  ]
+}

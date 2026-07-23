@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "release": "0.2.1",
+  "date": "2026-07-22",
+  "tag": "open-radio-0-2-1",
+  "codeCutCommit": "e4ec0c8d3e8a12407a983f6866e6be9750cfd6a8",
+  "appSha256": "98f0477a655cd42db42f6c806c059af9b8c33e6b0cd2eb6cd9b40d5fc1f44555",
+  "mergedImageSha256": "295ca3fdf9f9daf7a11ee979bc3371b2c79aaf48de5afe455668b72b23dc0546",
+  "publishedUrl": "https://fiedoruk.pl/os/open-radio-0-2-1.bin",
+  "sizeBytes": 2448160,
+  "flashOffset": "0x0",
+  "licenseUrl": "https://fiedoruk.pl/os/LICENSE-0-2-1.txt",
+  "correspondingSource": {
+    "url": "https://fiedoruk.pl/os/open-radio-0-2-1-corresponding-source.tar.gz",
+    "sha256": "e76ce6cc385dc1cba1f33720edececa10ba013b9a4dd4fc277ec9582a9811afd",
+    "sizeBytes": 59874900
+  },
+  "reproduction": {
+    "m5gfxPin": "M5GFX=https://github.com/m5stack/M5GFX.git#ad9b814264d4e2000e9f30070002310bbccaffc9",
+    "provenanceStampBytes": 104,
+    "contract": "REPRODUCIBILITY.md"
+  },
+  "hardwareEvidence": {
+    "ownerSmoke": "Core2 v1.0, release-day PASS (owner-attested)",
+    "fieldConfirmation": "Core2 v1.1, external user, browser install (owner-recorded third-party report)"
+  },
+  "releaseNotes": "docs/116-release-0-2-1.en.md"
+}

@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#0d1210">
+  <title>Open Radio Core2 — Hardware Day</title>
+  <style>
+    :root {
+      --ink: #f3f1e8;
+      --muted: #a8afa7;
+      --canvas: #0b0f0d;
+      --surface: #121815;
+      --raised: #19211d;
+      --line: #2a352f;
+      --orange: #ff7a1a;
+      --orange-soft: #3e2415;
+      --green: #78d89a;
+      --green-soft: #173122;
+      --yellow: #f4c85b;
+      --yellow-soft: #352d16;
+      --red: #ff756f;
+      --red-soft: #3d1d1b;
+      --blue: #7eb5ff;
+      --radius: 18px;
+      --mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+      --sans: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 82% -10%, rgba(255, 122, 26, .17), transparent 34rem),
+        radial-gradient(circle at -10% 40%, rgba(120, 216, 154, .08), transparent 28rem),
+        var(--canvas);
+      font-family: var(--sans);
+      line-height: 1.5;
+    }
+
+    button, input { font: inherit; }
+    button { color: inherit; }
+
+    .shell { width: min(1180px, calc(100% - 32px)); margin: 0 auto; }
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      border-bottom: 1px solid rgba(255,255,255,.07);
+      background: rgba(11, 15, 13, .88);
+      backdrop-filter: blur(18px);
+    }
+    .topbar-inner {
+      min-height: 68px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    .brand { display: flex; align-items: center; gap: 12px; font-weight: 800; letter-spacing: -.02em; }
+    .mark {
+      width: 34px;
+      height: 34px;
+      display: grid;
+      place-items: center;
+      border: 1px solid #565f59;
+      border-radius: 10px;
+      background: linear-gradient(145deg, #252d29, #101512);
+      box-shadow: inset 0 0 0 3px #0d110f;
+    }
+    .mark::before {
+      content: "";
+      width: 13px;
+      height: 13px;
+      border: 3px solid var(--orange);
+      border-radius: 50%;
+      box-shadow: 0 0 0 3px rgba(255,122,26,.14);
+    }
+    .eyebrow { color: var(--orange); font: 700 12px/1 var(--mono); letter-spacing: .12em; text-transform: uppercase; }
+    .live { display: flex; align-items: center; gap: 9px; color: var(--muted); font: 600 12px/1 var(--mono); }
+    .live-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--green); box-shadow: 0 0 0 5px rgba(120,216,154,.11); }
+
+    main { padding: 46px 0 80px; }
+    .hero { display: grid; grid-template-columns: 1.4fr .8fr; gap: 22px; align-items: stretch; }
+    .panel {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: linear-gradient(160deg, rgba(25,33,29,.96), rgba(17,23,20,.96));
+      box-shadow: 0 18px 70px rgba(0,0,0,.22);
+    }
+    .hero-main { padding: clamp(26px, 5vw, 54px); overflow: hidden; position: relative; }
+    .hero-main::after {
+      content: "H0";
+      position: absolute;
+      right: -12px;
+      bottom: -74px;
+      color: rgba(255,255,255,.025);
+      font: 900 260px/1 var(--sans);
+      letter-spacing: -.12em;
+      pointer-events: none;
+    }
+    h1 { max-width: 720px; margin: 16px 0 18px; font-size: clamp(40px, 7vw, 78px); line-height: .97; letter-spacing: -.055em; }
+    .lede { max-width: 680px; margin: 0; color: #c6cbc6; font-size: clamp(17px, 2vw, 21px); }
+    .hero-tags { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 28px; }
+    .tag { border: 1px solid var(--line); border-radius: 999px; padding: 8px 12px; color: #cdd2cd; background: rgba(0,0,0,.14); font: 650 12px/1 var(--mono); }
+    .tag.accent { color: var(--green); border-color: #315b41; background: var(--green-soft); }
+
+    .gate { padding: 28px; display: flex; flex-direction: column; justify-content: space-between; }
+    .gate-state { display: flex; justify-content: space-between; gap: 12px; align-items: start; }
+    .gate-lock { width: 50px; height: 50px; border-radius: 15px; display: grid; place-items: center; background: var(--yellow-soft); color: var(--yellow); font-size: 24px; }
+    .status { margin: 24px 0 6px; font-size: 30px; font-weight: 850; letter-spacing: -.04em; }
+    .status-copy { margin: 0 0 24px; color: var(--muted); }
+    .gate-rule { margin-top: 22px; padding-top: 20px; border-top: 1px solid var(--line); color: #d8d9d3; font-size: 14px; }
+
+    section { margin-top: 28px; }
+    .section-head { display: flex; justify-content: space-between; gap: 20px; align-items: end; margin-bottom: 14px; }
+    h2 { margin: 0; font-size: clamp(25px, 4vw, 38px); letter-spacing: -.04em; }
+    .section-note { max-width: 560px; margin: 0; text-align: right; color: var(--muted); font-size: 14px; }
+
+    .timeline { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; }
+    .stage { min-height: 190px; padding: 20px; border: 1px solid var(--line); border-radius: 16px; background: rgba(18,24,21,.78); }
+    .stage.active { border-color: #8c5a2e; background: linear-gradient(155deg, #2b1d14, #171c19); }
+    .stage.complete { border-color: #315b41; background: linear-gradient(155deg, #15291d, #171c19); }
+    .stage-no { color: var(--muted); font: 800 12px/1 var(--mono); letter-spacing: .08em; }
+    .stage.active .stage-no { color: var(--orange); }
+    .stage.complete .stage-no { color: var(--green); }
+    .stage h3 { margin: 36px 0 8px; font-size: 20px; letter-spacing: -.025em; }
+    .stage p { margin: 0; color: var(--muted); font-size: 13px; }
+    .stage-state { margin-top: 18px; display: inline-flex; padding: 6px 8px; border-radius: 7px; background: #202823; color: #aeb6af; font: 700 10px/1 var(--mono); }
+    .stage.active .stage-state { background: var(--orange-soft); color: #ffb67e; }
+    .stage.complete .stage-state { background: var(--green-soft); color: var(--green); }
+
+    .work-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 18px; }
+    .checklist { padding: 14px; }
+    .check-item { display: grid; grid-template-columns: 28px 1fr auto; gap: 13px; align-items: start; padding: 15px 12px; border-bottom: 1px solid var(--line); }
+    .check-item:last-child { border-bottom: 0; }
+    .check-item input { appearance: none; width: 22px; height: 22px; margin: 1px 0 0; border: 1px solid #647068; border-radius: 7px; background: #0d120f; cursor: pointer; }
+    .check-item input:checked { border-color: var(--green); background: var(--green); box-shadow: inset 0 0 0 5px var(--green-soft); }
+    .check-item label { cursor: pointer; }
+    .check-title { display: block; font-weight: 750; }
+    .check-copy { display: block; margin-top: 3px; color: var(--muted); font-size: 13px; }
+    .risk { align-self: center; padding: 5px 7px; border-radius: 6px; color: var(--yellow); background: var(--yellow-soft); font: 700 10px/1 var(--mono); }
+    .risk.safe { color: var(--green); background: var(--green-soft); }
+    .progress-box { padding: 24px; }
+    .progress-label { display: flex; justify-content: space-between; margin-bottom: 10px; font: 700 12px/1 var(--mono); color: var(--muted); }
+    .progress { height: 12px; overflow: hidden; border: 1px solid var(--line); border-radius: 999px; background: #090c0a; }
+    .progress > span { display: block; width: 0; height: 100%; background: linear-gradient(90deg, var(--orange), #ffb86f); transition: width .2s ease; }
+    .decision { margin-top: 20px; padding: 18px; border: 1px solid #5b4926; border-radius: 14px; background: var(--yellow-soft); }
+    .decision strong { color: var(--yellow); }
+    .decision p { margin: 7px 0 0; color: #ddd5bd; font-size: 14px; }
+    .mini-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+    .button { border: 1px solid #465249; border-radius: 10px; padding: 9px 12px; background: #1d2621; cursor: pointer; font-weight: 700; font-size: 12px; }
+    .button:hover { border-color: #6f7c73; background: #26312b; }
+
+    .commands { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+    .command-card { padding: 19px; }
+    .command-top { display: flex; justify-content: space-between; gap: 12px; align-items: center; }
+    .command-top h3 { margin: 0; font-size: 16px; }
+    .command-card p { min-height: 42px; color: var(--muted); font-size: 13px; }
+    pre { overflow-x: auto; margin: 14px 0 0; padding: 15px; border: 1px solid #263129; border-radius: 12px; background: #080b09; color: #d8e7db; font: 12px/1.65 var(--mono); white-space: pre; }
+    .copy { border: 0; border-radius: 8px; padding: 7px 9px; background: #28332d; color: #cdd7d0; cursor: pointer; font: 700 10px/1 var(--mono); }
+    .copy:hover { background: #344139; }
+    .command-card.locked { border-color: #574725; }
+    .command-card.danger { border-color: #68403d; }
+    .command-card.danger pre { color: #ffd1cd; }
+
+    .watch-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+    .watch { padding: 20px; border-left: 3px solid var(--yellow); }
+    .watch.stop { border-left-color: var(--red); }
+    .watch.good { border-left-color: var(--green); }
+    .watch h3 { margin: 0 0 8px; font-size: 16px; }
+    .watch p { margin: 0; color: var(--muted); font-size: 13px; }
+
+    .success { padding: 28px; display: grid; grid-template-columns: 70px 1fr; gap: 20px; align-items: center; }
+    .success-icon { width: 64px; height: 64px; display: grid; place-items: center; border-radius: 18px; background: var(--green-soft); color: var(--green); font-size: 30px; }
+    .success h2 { font-size: 26px; }
+    .success p { margin: 7px 0 0; color: var(--muted); }
+
+    footer { padding: 24px 0 40px; border-top: 1px solid rgba(255,255,255,.06); color: #7f8981; font: 12px/1.6 var(--mono); }
+    footer .shell { display: flex; justify-content: space-between; gap: 24px; }
+
+    @media (max-width: 920px) {
+      .hero, .work-grid { grid-template-columns: 1fr; }
+      .timeline { grid-template-columns: repeat(2, 1fr); }
+      .commands, .watch-grid { grid-template-columns: 1fr; }
+      .section-head { align-items: start; flex-direction: column; }
+      .section-note { text-align: left; }
+    }
+    @media (max-width: 560px) {
+      .shell { width: min(100% - 20px, 1180px); }
+      .topbar-inner { min-height: 60px; }
+      .live span:last-child { display: none; }
+      main { padding-top: 22px; }
+      .timeline { grid-template-columns: 1fr; }
+      .stage { min-height: 150px; }
+      .stage h3 { margin-top: 24px; }
+      .check-item { grid-template-columns: 28px 1fr; }
+      .risk { grid-column: 2; justify-self: start; }
+      .success { grid-template-columns: 1fr; }
+      footer .shell { flex-direction: column; }
+    }
+    @media print {
+      .topbar { position: static; }
+      body { background: #fff; color: #111; }
+      .panel, .stage { background: #fff; box-shadow: none; border-color: #bbb; }
+      .copy, .mini-actions { display: none; }
+      .muted, p, .check-copy, .status-copy, .section-note, .stage p, .watch p, .success p { color: #444 !important; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="shell topbar-inner">
+      <div class="brand"><span class="mark" aria-hidden="true">&#8203;</span><span>Open Radio <span style="color:var(--muted)">/ Core2</span></span></div>
+      <div class="live"><span class="live-dot" aria-hidden="true">&#8203;</span><span>H0 PASS · DISPLAY+AUDIO PASS · UX READY</span></div>
+    </div>
+  </header>
+
+  <main class="shell">
+    <div class="hero">
+      <article class="panel hero-main">
+        <div class="eyebrow">Hardware day control center</div>
+        <h1>Kostka działa.<br>Teraz spinamy UX.</h1>
+        <p class="lede">Backup fabryczny jest bezpieczny, reset stosu zamknięty, kolory i dźwięk potwierdzone. Następny obraz łączy duży QR, wspólną logikę A/B/C i większy minimalny ekran RTC.</p>
+        <div class="hero-tags">
+          <span class="tag accent">SOFTWARE GATE · PASS</span>
+          <span class="tag">DISPLAY+AUDIO · PHYSICAL PASS</span>
+          <span class="tag">FIRMWARE · 2 230 064 B</span>
+          <span class="tag">TARGET · CORE2 / 16 MiB</span>
+        </div>
+      </article>
+
+      <aside class="panel gate">
+        <div>
+          <div class="gate-state"><span class="eyebrow">Bieżąca bramka</span><span class="gate-lock" aria-hidden="true">⌁</span></div>
+          <div class="status">UX REFLASH LOCKED</div>
+          <p class="status-copy">Paczka QR + A/B/C + minimalny RTC przechodzi walidację. Zapis urządzenia pozostaje zablokowany do nowej jawnej zgody ownera.</p>
+        </div>
+        <div class="gate-rule"><strong style="color:var(--ink)">H0 zaliczone:</strong> chip i flash są zgodne, pełny backup oraz checksum są zabezpieczone. <strong style="color:var(--red)">Nie wolno teraz:</strong> wykonywać kolejnego write, flash, erase ani eFuse bez nowej bramki H1.</div>
+      </aside>
+    </div>
+
+    <section aria-labelledby="roadmap-title">
+      <div class="section-head">
+        <div><div class="eyebrow">Droga do gotowej kostki</div><h2 id="roadmap-title">Pięć bramek, bez skrótów</h2></div>
+        <p class="section-note">H0 chroni możliwość powrotu. H1 potwierdza płytkę. Dopiero H2–H4 potwierdzają radio, Bluetooth i długą pracę.</p>
+      </div>
+      <div class="timeline">
+        <article class="stage complete"><div class="stage-no">H0 · PASS</div><h3>Tożsamość i backup</h3><p>Port, chip, 16 MiB flash, pełny obraz fabryczny i jednoznaczny rollback.</p><span class="stage-state">COMPLETE</span></article>
+        <article class="stage active"><div class="stage-no">H1 · UX</div><h3>QR i sterowanie</h3><p>Wyświetlacz i audio zaliczone. Duży QR, jedna ścieżka A/B/C oraz minimalny ekran RTC czekają na zgodę.</p><span class="stage-state">REFLASH LOCKED</span></article>
+        <article class="stage"><div class="stage-no">H2</div><h3>Radio i recovery</h3><p>MP3 lokalnie, 15/60 min, utrata Wi‑Fi i streamu, jawne unsupported HLS.</p><span class="stage-state">WAITING</span></article>
+        <article class="stage"><div class="stage-no">H3</div><h3>Bluetooth A2DP</h3><p>Xiaomi, MOZOS, exact-address reconnect, fallback i RF coexistence.</p><span class="stage-state">WAITING</span></article>
+        <article class="stage"><div class="stage-no">H4</div><h3>Endurance</h3><p>Heap, PSRAM, stack, underruny oraz soak 2 h, 8 h i później 24 h.</p><span class="stage-state">WAITING</span></article>
+      </div>
+    </section>
+
+    <section aria-labelledby="now-title">
+      <div class="section-head">
+        <div><div class="eyebrow">Co robimy teraz</div><h2 id="now-title">Checklista przed reflash UX</h2></div>
+        <p class="section-note">Stan checklisty zapisuje się wyłącznie lokalnie w tej przeglądarce. Nie wpisuj tu haseł, portów, MAC ani hashy backupu.</p>
+      </div>
+      <div class="work-grid">
+        <div class="panel checklist" id="checklist">
+          <div class="check-item"><input id="c1" type="checkbox"><label for="c1"><span class="check-title">Display i audio potwierdzone</span><span class="check-copy">Kolory są poprawne, tekst czytelny, lokalny głośnik działa, reset stosu nie wraca.</span></label><span class="risk safe">PHYSICAL PASS</span></div>
+          <div class="check-item"><input id="c2" type="checkbox"><label for="c2"><span class="check-title">Duży QR konfiguracji</span><span class="check-copy">Kod 184×184 zawiera wyłącznie dane jednorazowego AP OpenRadio‑Setup.</span></label><span class="risk safe">TESTED</span></div>
+          <div class="check-item"><input id="c3" type="checkbox"><label for="c3"><span class="check-title">A/B/C korzystają z jednej logiki</span><span class="check-copy">Przyciski pod ekranem rzutują się na lewą, środkową i prawą akcję aktualnego widoku.</span></label><span class="risk safe">HOST PASS</span></div>
+          <div class="check-item"><input id="c4" type="checkbox"><label for="c4"><span class="check-title">Minimalny ekran bez buttonów LCD</span><span class="check-copy">Większa godzina i data pochodzą z RTC; pogoda bez danych nie jest fabrykowana.</span></label><span class="risk safe">RENDER PASS</span></div>
+          <div class="check-item"><input id="c5" type="checkbox"><label for="c5"><span class="check-title">Prywatny backup nadal zweryfikowany</span><span class="check-copy">Obraz 16 MiB i jego SHA pozostają poza Git; rollback jest zachowany.</span></label><span class="risk">PRIVATE</span></div>
+          <div class="check-item"><input id="c6" type="checkbox"><label for="c6"><span class="check-title">Dokładny obraz UX zbudowany</span><span class="check-copy">Firmware 2 230 064 B; SHA‑256 3204b9e8…112b35 z dwóch clean-buildów.</span></label><span class="risk">BUILD</span></div>
+          <div class="check-item"><input id="c7" type="checkbox"><label for="c7"><span class="check-title">Rollback i port pozostają jednoznaczne</span><span class="check-copy">Bez erase-all, bez eFuse i bez publikowania identyfikatorów urządzenia.</span></label><span class="risk">STOP POINT</span></div>
+          <div class="check-item"><input id="c8" type="checkbox"><label for="c8"><span class="check-title">Uzyskaj zgodę na reflash UX</span><span class="check-copy">CONFIRM_FLASH=YES dopiero po pełnym gate i przedstawieniu zakresu QR + A/B/C + RTC.</span></label><span class="risk">WRITE GATE</span></div>
+        </div>
+        <aside class="panel progress-box">
+          <div class="progress-label"><span>GOTOWOŚĆ DO H1</span><span id="progressText">0 / 8</span></div>
+          <div class="progress" aria-label="Postęp checklisty"><span id="progressBar"></span></div>
+          <div class="decision">
+            <strong>Po reflash sprawdzamy bez skrótów</strong>
+            <p>QR → wybór domowego Wi‑Fi → A/B/C na kilku ekranach → minimalny ekran i RTC → serial bez resetów.</p>
+          </div>
+          <div class="decision" style="border-color:#6b3e39;background:var(--red-soft)">
+            <strong style="color:var(--red)">Potwierdzenie przed zapisem UX</strong>
+            <p>„Potwierdzam reflash UX: duży QR, A/B/C i minimalny ekran RTC. Bez erase i eFuse.”</p>
+          </div>
+          <div class="mini-actions"><button class="button" id="resetChecks">Wyczyść checklistę</button><button class="button" onclick="window.print()">Drukuj / PDF</button></div>
+        </aside>
+      </div>
+    </section>
+
+    <section aria-labelledby="commands-title">
+      <div class="section-head">
+        <div><div class="eyebrow">Sekwencja kontrolowana</div><h2 id="commands-title">Komendy — kopiuj etapami</h2></div>
+        <p class="section-note">Nie uruchamiaj całego zestawu naraz. Każda karta kończy się oceną PASS/STOP.</p>
+      </div>
+      <div class="commands">
+        <article class="panel command-card">
+          <div class="command-top"><h3>1 · Host — bez urządzenia</h3><button class="copy" data-copy="hostCommands">KOPIUJ</button></div>
+          <p>Bezpieczny gate przed podłączeniem kostki. Nie wykonuje akcji urządzeniowej.</p>
+          <pre id="hostCommands">cd /path/to/radio-esp32
+git status --short
+npm run check</pre>
+        </article>
+        <article class="panel command-card locked">
+          <div class="command-top"><h3>2 · H0 — po zgodzie T3</h3><button class="copy" data-copy="h0Commands">KOPIUJ</button></div>
+          <p>Identyfikacja i backup. Wstaw wyłącznie potwierdzony port `/dev/cu.*`.</p>
+          <pre id="h0Commands">export PORT=/dev/cu.REPLACE_ME
+export ESP32_ALLOW_DEVICE_ACTION=1
+scripts/core2-device-action.sh preflight
+scripts/core2-device-action.sh backup</pre>
+        </article>
+        <article class="panel command-card danger">
+          <div class="command-top"><h3>3 · H1 — po drugiej zgodzie</h3><button class="copy" data-copy="h1Commands">KOPIUJ</button></div>
+          <p>Pierwszy zapis. Skrypt sam ponawia host gate, build i weryfikuje backup.</p>
+          <pre id="h1Commands">export CONFIRM_FLASH=YES
+scripts/core2-device-action.sh flash</pre>
+        </article>
+      </div>
+    </section>
+
+    <section aria-labelledby="watch-title">
+      <div class="section-head">
+        <div><div class="eyebrow">Na co uważać</div><h2 id="watch-title">Warunki natychmiastowego STOP</h2></div>
+      </div>
+      <div class="watch-grid">
+        <article class="panel watch stop"><h3>Niejednoznaczny port lub flash</h3><p>Jeśli pojawia się więcej urządzeń, inny chip albo flash nie ma 16 MiB — odłączamy i diagnozujemy. Nie zgadujemy.</p></article>
+        <article class="panel watch stop"><h3>Brak pełnego backupu</h3><p>Nie ma zapisu bez dokładnie 16 777 216 bajtów, poprawnego SHA‑256 i prywatnego miejsca przechowania.</p></article>
+        <article class="panel watch stop"><h3>Reset, czarny ekran, zły touch</h3><p>Powtarzalny reset, nieczytelny ekran, zły transform dotyku lub brak głośnika lokalnego zatrzymuje H1.</p></article>
+        <article class="panel watch"><h3>Dane prywatne w logach</h3><p>Nie publikujemy MAC, BSSID, SSID, haseł, prywatnych endpointów ani obrazu fabrycznego. Log sanitizujemy przed eksportem.</p></article>
+        <article class="panel watch"><h3>Nieodwracalne zabezpieczenia</h3><p>Na pierwszym bring-up nie palimy eFuse, nie włączamy secure boot ani flash encryption. To osobna decyzja po H0.</p></article>
+        <article class="panel watch good"><h3>Dobry blocker też jest sukcesem</h3><p>Jeśli H0/H1 zatrzyma się bez utraty obrazu fabrycznego i z precyzyjnym dowodem, sesja nadal jest bezpiecznie zakończona.</p></article>
+      </div>
+    </section>
+
+    <section>
+      <article class="panel success">
+        <div class="success-icon" aria-hidden="true">✓</div>
+        <div><h2>Sukces pierwszej sesji</h2><p>Pełny backup i jednoznaczny rollback H0 oraz zaliczony smoke H1 — albo precyzyjny, ograniczony blocker bez utraty fabrycznego obrazu. H2–H4 mogą być kolejnymi sesjami; nie skracamy endurance tylko po to, żeby szybciej powiedzieć „gotowe”.</p></div>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <div class="shell"><span>OPEN RADIO CORE2 · HARDWARE DAY · 2026-07-15</span><span>Firmware SHA‑256: 3204b9e8…112b35</span></div>
+  </footer>
+
+  <script>
+    const checks = [...document.querySelectorAll('#checklist input[type="checkbox"]')];
+    const progressBar = document.querySelector('#progressBar');
+    const progressText = document.querySelector('#progressText');
+    const storageKey = 'open-radio.hardware-day.h0.v1';
+
+    function renderProgress() {
+      const done = checks.filter(check => check.checked).length;
+      progressText.textContent = `${done} / ${checks.length}`;
+      progressBar.style.width = `${(done / checks.length) * 100}%`;
+      localStorage.setItem(storageKey, JSON.stringify(checks.map(check => check.checked)));
+    }
+
+    try {
+      const saved = JSON.parse(localStorage.getItem(storageKey) ?? '[]');
+      checks.forEach((check, index) => { check.checked = saved[index] === true; });
+    } catch { localStorage.removeItem(storageKey); }
+    checks.forEach(check => check.addEventListener('change', renderProgress));
+    renderProgress();
+
+    document.querySelector('#resetChecks').addEventListener('click', () => {
+      checks.forEach(check => { check.checked = false; });
+      renderProgress();
+    });
+
+    document.querySelectorAll('[data-copy]').forEach(button => {
+      button.addEventListener('click', async () => {
+        const source = document.querySelector(`#${button.dataset.copy}`)?.textContent ?? '';
+        await navigator.clipboard.writeText(source);
+        const previous = button.textContent;
+        button.textContent = 'SKOPIOWANO';
+        setTimeout(() => { button.textContent = previous; }, 1400);
+      });
+    });
+  </script>
+</body>
+</html>

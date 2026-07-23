@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fiedoruk.pl/open-radio/schemas/bluetooth-compatibility-result.schema.json",
+  "title": "BluetoothCompatibilityResult",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "reportType", "firmwareSha256", "speakerClass", "profile", "a2dpSink", "sbc", "avrcpObserved", "outcome", "reconnectBucket", "localFallback"],
+  "properties": {
+    "schemaVersion": {"const": 1},
+    "reportType": {"const": "BLUETOOTH_COMPATIBILITY"},
+    "firmwareSha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "speakerClass": {"enum": ["MAINS_SPEAKER", "BATTERY_SPEAKER", "HEADPHONES", "OLDER_SBC", "MODERN_MULTIPROFILE"]},
+    "profile": {"enum": ["CLASSIC_A2DP", "LE_AUDIO_ONLY", "UNKNOWN"]},
+    "a2dpSink": {"enum": ["SUPPORTED", "UNSUPPORTED", "UNKNOWN"]},
+    "sbc": {"enum": ["SUPPORTED", "UNSUPPORTED", "UNKNOWN"]},
+    "avrcpObserved": {"enum": ["PRESENT", "ABSENT", "UNKNOWN"]},
+    "outcome": {"enum": ["PASS", "FAIL", "OUT_OF_SCOPE", "NOT_MEASURED"]},
+    "reconnectBucket": {"enum": ["LT_5S", "S5_TO_15", "S16_TO_60", "GT_60S", "NOT_MEASURED"]},
+    "localFallback": {"enum": ["PASS", "FAIL", "NOT_MEASURED"]}
+  }
+}

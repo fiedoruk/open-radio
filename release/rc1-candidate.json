@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "candidate": "open-radio-0-2-1",
+  "evidenceFirmwareSha256": "98f0477a655cd42db42f6c806c059af9b8c33e6b0cd2eb6cd9b40d5fc1f44555",
+  "sourceOnly": false,
+  "binaryIncluded": true,
+  "hardwareValidated": true,
+  "published": true,
+  "publishedUrl": "https://fiedoruk.pl/os/open-radio-0-2-1.bin",
+  "publishedSha256": "295ca3fdf9f9daf7a11ee979bc3371b2c79aaf48de5afe455668b72b23dc0546",
+  "sourceTag": "open-radio-0-2-1"
+}

@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "hardwareValidated": true,
+  "matrixStatus": "PARTIAL_HARDWARE_EVIDENCE",
+  "candidates": [
+    {
+      "id": "xiaomi-sound-pocket",
+      "role": "PRIMARY",
+      "manufacturer": "Xiaomi",
+      "model": "Sound Pocket",
+      "revision": "MDZ-37-DB",
+      "declaredBluetoothVersion": "5.4",
+      "a2dpSink": "SUPPORTED",
+      "sbc": "SUPPORTED",
+      "qualificationStatus": "FOCUSED_PCM_PASS_ENDURANCE_FAILED",
+      "evidence": {
+        "measuredAt": "2026-07-18",
+        "firmwareSha256": "94c25a9e373f2bc0b3dabeaf4af19483362aa9486a7eafd638f25b2d9e562f12",
+        "sourceCommit": "44f19e49a64eeb2a9107f9e929e9577071623e32",
+        "profile": "BLUETOOTH_CLASSIC_A2DP",
+        "codec": "SBC",
+        "focusedRmfSeconds": 600,
+        "passiveRmfSeconds": 3600,
+        "currentImageSpeakerReconnect": "NOT_MEASURED",
+        "currentImageLocalFallback": "NOT_MEASURED",
+        "endurance": "FAILED",
+        "enduranceFailure": "ESP_RST_PANIC_AND_POST_REBOOT_STREAM_STARVATION",
+        "resetReason": 4,
+        "panicElapsedMs": 2594295,
+        "pullWatchdogElapsedMs": 2573621,
+        "wifiRecoveryMs": 4731,
+        "streamFirstReadRecoveryMs": 19696,
+        "bluetoothMediaRecoveryMs": 100585,
+        "postResetActiveSilenceFrames": 2411520,
+        "postResetIdleSilenceFrames": 109821,
+        "postResetStreamStarts": 8,
+        "postResetStreamStops": 7,
+        "sanitizedEvidence": "output/hardware-soaks/2026-07-18T09-36-05.444Z-final-audit-rmf-60m.json"
+      }
+    },
+    {
+      "id": "mozos-outdoor-xtreme",
+      "role": "SECONDARY",
+      "manufacturer": "MOZOS",
+      "model": "Outdoor-Xtreme",
+      "revision": "READ_FROM_LABEL",
+      "declaredBluetoothVersion": "REVISION_DEPENDENT",
+      "a2dpSink": "NOT_MEASURED",
+      "sbc": "NOT_MEASURED",
+      "qualificationStatus": "NOT_MEASURED"
+    },
+    {
+      "id": "soundcore-boom-go-3i",
+      "role": "POWERBANK_CANDIDATE",
+      "manufacturer": "soundcore by Anker",
+      "model": "Boom Go 3i",
+      "revision": "READ_FROM_LABEL",
+      "declaredBluetoothVersion": "VERIFY_ON_ARRIVAL",
+      "a2dpSink": "NOT_MEASURED",
+      "sbc": "NOT_MEASURED",
+      "qualificationStatus": "NOT_MEASURED"
+    }
+  ]
+}
