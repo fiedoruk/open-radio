@@ -43,8 +43,9 @@ Reprodukcję co do bajta i jej trzy wymagane parametry builda opisuje
   właściciela).
 - Niezależne potwierdzenie z terenu: zewnętrzny użytkownik zainstalował
   0.2.1 z przeglądarki na fabrycznie świeżym Core2 v1.1 i zgłosił działanie
-  (relacja osoby trzeciej zapisana przez właściciela). Obie rewizje sprzętu
-  mają więc dowody z terenu.
+  (relacja osoby trzeciej zapisana przez właściciela).
+- Potwierdzenie klienta na Core2 v1.3 (2026-07-24, zapis właściciela): ten
+  sam obraz gra na całej linii — v1.0, v1.1 i v1.3.
 
 ## Znane ograniczenia
 

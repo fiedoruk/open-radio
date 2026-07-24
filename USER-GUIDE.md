@@ -6,7 +6,8 @@
 
 The current public release 0.2.1 is hardware-validated: release-day smoke
 passed on the owner's Core2 v1.0, and an external user independently installed
-and confirmed it on a factory-fresh Core2 v1.1, so both hardware revisions
+and confirmed it on a factory-fresh Core2 v1.1, a customer confirmed v1.3,
+so the whole hardware line
 have field evidence. Battery duration is owner-measured (~2.5 h typical, up to ~3 h); power-bank
 behavior and long endurance runs remain unmeasured for 0.2.1 — the release notes list every known
 limitation ([docs/116-release-0-2-1.en.md](docs/116-release-0-2-1.en.md)).

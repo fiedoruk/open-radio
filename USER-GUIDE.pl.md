@@ -6,7 +6,8 @@
 
 Aktualne publiczne wydanie 0.2.1 ma walidację sprzętową: smoke z dnia wydania
 przeszedł na Core2 v1.0 właściciela, a zewnętrzny użytkownik niezależnie
-zainstalował i potwierdził je na fabrycznie świeżym Core2 v1.1 — obie rewizje
+zainstalował i potwierdził je na fabrycznie świeżym Core2 v1.1, a klient
+potwierdził v1.3 — cała linia rewizji
 sprzętu mają dowody z terenu. Czas na baterii jest zmierzony przez właściciela (~2,5 h typowo, do ~3 h);
 praca z powerbanku i długie biegi endurance pozostają dla 0.2.1 niezmierzone — noty wydania wymieniają
 wszystkie znane ograniczenia ([docs/116-release-0-2-1.pl.md](docs/116-release-0-2-1.pl.md)).

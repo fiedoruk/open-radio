@@ -5,7 +5,7 @@
 ## Dyrektywa nadrzędna: 0.2.1 jest nietykalną bazą
 
 Wydanie 0.2.1 działa w terenie — audio, Wi-Fi, Bluetooth, logotypy runtime i
-responsywny dotyk — i ma walidację na obu rewizjach sprzętu Core2. Cały ten
+responsywny dotyk — i ma walidację na całej linii rewizji Core2 (v1.0/v1.1/v1.3). Cały ten
 plan podlega jednej zasadzie: **nic nie może pogorszyć tego, co 0.2.1 już
 robi.** Opublikowany `open-radio-0-2-1.bin` nigdy nie jest podmieniany ani
 przenoszony; powrót do niego musi być możliwy na każdym kroku (artefakt
@@ -122,7 +122,7 @@ punktami A, jest domyślnie poza zakresem.
   determinizmu.
 - **Faza 4 — bramka sprzętowa (okna właściciela):** macierz flashowania
   fabrycznie świeżych kostek na każdej rewizji Core2 dostępnej w chwili
-  bramki (dziś v1.0 i v1.1; nadchodząca v1.3 dołącza od ręki), smoke dziewięciu stacji plus stacje z konsoli
+  bramki (dziś v1.0, v1.1 i v1.3), smoke dziewięciu stacji plus stacje z konsoli
   (w tym kandydat 357), pełny pass pobierania logo, cykle reconnect
   Bluetooth, recovery Wi-Fi, 60-minutowy soak (domknięcie długo otwartego
   B1), potwierdzenie czasu na baterii na obrazie wydania (pierwszy pomiar

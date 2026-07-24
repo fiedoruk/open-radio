@@ -5,7 +5,7 @@
 ## Prime directive: 0.2.1 is the untouchable baseline
 
 Release 0.2.1 works in the field — audio, Wi-Fi, Bluetooth, runtime logos and
-a responsive touch UI — and is validated on both Core2 hardware revisions.
+a responsive touch UI — and is validated across the Core2 hardware line (v1.0/v1.1/v1.3).
 Everything in this plan obeys one rule: **nothing may degrade what 0.2.1
 already does.** The published `open-radio-0-2-1.bin` is never republished or
 moved; rollback to it must stay possible at every step (the artifact stays on
@@ -116,8 +116,7 @@ surfaces beyond the A-items listed above is out of scope by default.
 - **Phase 3 — release engineering:** A5/A6; document the new determinism
   baseline.
 - **Phase 4 — hardware gate (owner windows):** factory-fresh flash matrix
-  on every Core2 revision available at gate time (v1.0 and v1.1 today; the
-  incoming v1.3 joins the moment it arrives), nine-station smoke plus
+  on every Core2 revision available at gate time (v1.0, v1.1 and v1.3 today), nine-station smoke plus
   console-added stations (including the 357
   candidate), full logo fetch pass, Bluetooth reconnect cycles, Wi-Fi
   recovery, a 60-minute soak (closing the long-open B1), a battery-duration re-confirmation on the release image (first owner

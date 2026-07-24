@@ -39,6 +39,10 @@ not own. The same user's earlier serial logs diagnosed both 0.2 field
 bugs. Together with the owner's v1.0 (AXP192) reference device, both
 hardware revisions of the Core2 are now validated in the field.
 
+**Third revision confirmed (2026-07-24):** a customer's cube on Core2
+**v1.3** runs release 0.2.1 — the same image now has field evidence across
+the entire line: v1.0 (AXP192), v1.1 (AXP2101) and v1.3.
+
 ## Hardware evidence for 0.2
 
 Measured on the reference device running the exact release bits: all nine

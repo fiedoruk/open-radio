@@ -79,6 +79,13 @@ for (const readme of ["README.md", "README.pl.md"]) {
 }
 requireIn("STATUS.md", new RegExp(`Current state:.*${claims.currentRelease.replace(/\./g, "\\.")}`, "s"),
   `Current state must carry ${claims.currentRelease}`);
+for (const rev of claims.hardwareRevisions ?? []) {
+  const short = rev.split(" ")[0];
+  for (const doc of ["README.md", "README.pl.md", "STATUS.md"]) {
+    requireIn(doc, new RegExp(short.replace(/\./g, "\\.")),
+      `must name field-validated hardware revision ${short}`);
+  }
+}
 requireIn("CURRENT-MISSION.md", new RegExp(claims.currentRelease.replace(/\./g, "\\.")),
   `must name the current release ${claims.currentRelease}`);
 for (const suffix of [".en.md", ".pl.md"]) {

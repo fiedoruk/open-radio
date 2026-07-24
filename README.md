@@ -23,7 +23,7 @@
 <p align="center"><b><a href="https://fiedoruk.pl/open-radio-install-en.html">⚡ Install from the browser</a></b> · <a href="https://fiedoruk.pl/os/open-radio-0-2-1.bin">Download 0.2.1</a> · <a href="docs/116-release-0-2-1.en.md">Release notes</a> · <a href="https://fiedoruk.pl/open-radio-stations-en.html">The 218 stations</a></p>
 
 > Released publicly as **Open Radio** — the current release is **0.2.1**
-> (2026-07-22, hardware-validated on both Core2 revisions in the field);
+> (2026-07-22, field-validated across the Core2 line: v1.0, v1.1 and v1.3);
 > 0.1 and 0.2 remain downloadable as historical builds.
 > Official binaries come only from [fiedoruk.pl/open-radio](https://fiedoruk.pl/open-radio.html).
 > Release notes and known limitations: [docs/116-release-0-2-1.en.md](docs/116-release-0-2-1.en.md).
@@ -96,8 +96,9 @@ audio and does not imply broadcaster endorsement.
 ## Hardware target
 
 - M5Stack Core2 with ESP32-D0WDQ6-V3 — field-validated on hardware
-  revisions v1.0 (AXP192) and v1.1 (AXP2101) with the same image; every new
-  Core2 revision joins the release test matrix as soon as it is available
+  revisions v1.0 (AXP192), v1.1 (AXP2101) and v1.3 with the same image;
+  every new Core2 revision joins the release test matrix as soon as it is
+  available
 - 16 MB flash and 8 MB PSRAM
 - 320×240 touch display
 - built-in I2S speaker and internal battery
@@ -130,8 +131,9 @@ Available now:
 
 Measured on the release line (0.2.1):
 
-- release-day smoke on the owner's Core2 v1.0 and an independent field
-  install on a factory-fresh v1.1 — both hardware revisions covered,
+- release-day smoke on the owner's Core2 v1.0, an independent field install
+  on a factory-fresh v1.1, and a customer confirmation on v1.3 — the whole
+  hardware line covered by the same image,
 - all nine station logos fetched in a single pass, first audio ≈1.2 s after
   the network, the remembered speaker back in ≈3.1 s, zero underruns at
   start,

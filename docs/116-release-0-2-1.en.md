@@ -40,8 +40,9 @@ in `REPRODUCIBILITY.md`.
 - Release-day smoke on the owner's Core2 v1.0: PASS (owner-attested).
 - Independent field confirmation: an external user installed 0.2.1 from the
   browser on a factory-fresh Core2 v1.1 and reported it working
-  (owner-recorded third-party report). Both hardware revisions therefore
-  have field evidence.
+  (owner-recorded third-party report).
+- Customer confirmation on Core2 v1.3 (2026-07-24, owner-recorded): the
+  same image runs across the whole line — v1.0, v1.1 and v1.3.
 
 ## Known limitations
 

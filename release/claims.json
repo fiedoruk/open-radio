@@ -9,5 +9,10 @@
     "typical": "~2.5 h (draw ~140 mA, peaks ~190 mA)"
   },
   "correspondingSourcePublished": true,
-  "directoryCount": 218
+  "directoryCount": 218,
+  "hardwareRevisions": [
+    "v1.0 (AXP192)",
+    "v1.1 (AXP2101)",
+    "v1.3"
+  ]
 }

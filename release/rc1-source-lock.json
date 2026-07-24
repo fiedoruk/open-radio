@@ -581,27 +581,27 @@
     },
     {
       "path": "docs/116-release-0-2-1.en.md",
-      "bytes": 3842,
+      "bytes": 3922,
       "mode": "0644",
-      "sha256": "ecc270de52806958a69b1e890b089a4891bebfb86b5250b6126ca7acf130485f"
+      "sha256": "a2eacbcab1f2dc35545c584a2e269f4c24cac8130b9a898050bcd31a7eed187c"
     },
     {
       "path": "docs/116-release-0-2-1.pl.md",
-      "bytes": 4059,
+      "bytes": 4138,
       "mode": "0644",
-      "sha256": "322a5f2ba0154452c4f8e6eba4233212a1d1a50e30492599281513b08735ec38"
+      "sha256": "2213d4c61123fb56ebf6f2a574abb79a8f204ba76c6edd6efcbb4245e4a56ae1"
     },
     {
       "path": "docs/117-0-2-2-maintenance-plan.en.md",
-      "bytes": 7496,
+      "bytes": 7468,
       "mode": "0644",
-      "sha256": "b5450120ef235cad6ace76315b7766ddb712f2464c6aaf2f6d73097b4ed382fc"
+      "sha256": "b445d4cffc93e759252aaaca72d99a1b7fa367ef7ab80aa9c8a467604e9b5c7f"
     },
     {
       "path": "docs/117-0-2-2-maintenance-plan.pl.md",
-      "bytes": 8080,
+      "bytes": 8063,
       "mode": "0644",
-      "sha256": "33025cbec10d0b682394fd6f570377ac3da03227de2cccb424628aea39d96e68"
+      "sha256": "a40101085624ee8772ffa9ff250edff8677dbb133b3c90be66742b16cd3650b2"
     },
     {
       "path": "docs/12-product-philosophy.en.md",
@@ -1823,21 +1823,21 @@
     },
     {
       "path": "README.md",
-      "bytes": 11081,
+      "bytes": 11146,
       "mode": "0644",
-      "sha256": "f2d4852aec7101f8216b53e138f2a8de5b1cff16ff906b024411c47e9cff4dcd"
+      "sha256": "b65edd8ec5bd6b2b046c3ea7146f135878c98cfcdc5d4eb9e73d10410c6c0df4"
     },
     {
       "path": "README.pl.md",
-      "bytes": 11513,
+      "bytes": 11578,
       "mode": "0644",
-      "sha256": "e456ba6afdd26917c772a5f765ef3c996d26ad39245b946ca1566bb444f25c1b"
+      "sha256": "632d31c26d493600a3066fc2b13df3f58abb50fbdf917b706ec998c32a60a5c5"
     },
     {
       "path": "release/claims.json",
-      "bytes": 360,
+      "bytes": 444,
       "mode": "0644",
-      "sha256": "1786b013d991f36ce1ea50d9a0b1238ed0e1bee2ed0bd8059a66c31fb43a9bcb"
+      "sha256": "b2fbfdb1c5f2d9fcca6d41b2756fea72b2d2c52137e855765ccb0c65138edf9c"
     },
     {
       "path": "release/public-mirror-policy.json",
@@ -2111,9 +2111,9 @@
     },
     {
       "path": "scripts/check-doc-currency.mjs",
-      "bytes": 3908,
+      "bytes": 4190,
       "mode": "0644",
-      "sha256": "16cb6b2e4bf4ec2adbe77051e6dbba56cce082412b41c398276c8cebb13801f6"
+      "sha256": "75e01cbd965179d20a0f517934d7531dab1a1628c2995c28d296b24cfc1760cd"
     },
     {
       "path": "scripts/check-docs-parity.mjs",
