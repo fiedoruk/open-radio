@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "currentRelease": "0.2.1",
+  "currentTag": "open-radio-0-2-1",
+  "releaseNotesBase": "docs/116-release-0-2-1",
+  "publicRepoUrl": "https://github.com/fiedoruk/open-radio",
+  "battery": {
+    "measured": true,
+    "typical": "~2.5 h (draw ~140 mA, peaks ~190 mA)"
+  },
+  "correspondingSourcePublished": true,
+  "directoryCount": 218
+}

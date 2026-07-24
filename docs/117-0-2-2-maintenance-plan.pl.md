@@ -129,7 +129,9 @@ punktami A, jest domyślnie poza zakresem.
   właściciela 2026-07-23: ~2,5–3 h przy 140–190 mA) oraz próbny
   rollback do 0.2.1.
 - **Faza 5 — publikacja:** osobne GO właściciela; 0.2.1 pozostaje serwowane
-  obok.
+  obok. Przy cięciu podbij `release/claims.json` — bramka
+  `check:doc-currency` obala wtedy każdy żywy dokument opowiadający jeszcze
+  historię starego wydania, aż przegląd dokumentacji będzie kompletny.
 
 **Reguła stopu:** każdy sygnał regresji świętej powierzchni w Fazie 4
 zatrzymuje wydanie; rollback do 0.2.1, root-cause z najwyżej trzema próbami
@@ -141,5 +143,6 @@ naprawy i dopiero wtedy powrót do bramki.
 zielona; kompilacja firmware w CI zielona; dwa zimne buildy odtwarzają hash
 wydania; każdy dotknięty plik zamrożony ma zrecenzowany wpis locka; macierz
 urządzeń z Fazy 4 zapisana z pokryciem obu rewizji sprzętu; noty wydania
-wymieniają każde pozostałe znane ograniczenie; ścieżka rollbacku do 0.2.1
+wymieniają każde pozostałe znane ograniczenie; `release/claims.json` jest
+podbity, a bramka `check:doc-currency` zielona; ścieżka rollbacku do 0.2.1
 udowodniona, nie zakładana.

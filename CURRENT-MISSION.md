@@ -1,6 +1,6 @@
 # CURRENT MISSION — Open Radio Core2
 
-**Updated:** 2026-07-22
+**Updated:** 2026-07-23
 
 **Maintainer:** Tomasz Fiedoruk
 
@@ -35,9 +35,13 @@ backup.
    long-run station switching, real bitrate-ceiling reading, and the three
    watch items from `STATUS.md` (DRAM during Bluetooth dialing, 15 s pairing
    cadence, Bluetooth-route input underruns).
-2. **Public repository launch** — prepared and owner-gated: decision in
-   `decisions/ADR-011`, procedure and standing tree-guard QC in `docs/114`
-   plus `release/public-mirror-policy.json`.
+2. **Public repository — LIVE**: <https://github.com/fiedoruk/open-radio>
+   (sanitized import per `decisions/ADR-012`; CI compiles the firmware on
+   every push). Ongoing sync model: delta commits on the public `main`;
+   the standing tree-guard QC stays in `release/public-mirror-policy.json`.
+3. **0.2.2 maintenance** per `docs/117-0-2-2-maintenance-plan.en.md`:
+   rails first (frozen surface widened), host-only fixes, then the
+   hardware gate.
 3. **0.3 candidates** stay parked until the owner opens them: TLS audio
    (unlocks TLS-only broadcasters such as Radio 357 and Radio Nowy Świat) and
    catalog-refresh probe admission for unknown bitrates.

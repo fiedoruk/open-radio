@@ -129,27 +129,30 @@ Gotowe teraz:
 - powtarzalne źródła firmware, chroniony restore dokładnego obrazu i zbieranie
   dowodów sprzętowych.
 
-Dotychczas zmierzono:
+Zmierzone na linii wydania (0.2.1):
 
-- odtwarzanie Classic A2DP/SBC na Xiaomi Sound Pocket;
-- skupione 600 sekund RMF na poprawionym obrazie z jednym rzeczywistym restartem
-  streamu, bez wstrzykniętej ciszy BT i z czystym końcowym oknem odsłuchu;
-- wcześniejszy smoke dziewięciu stacji, w którym każda odzyskała granie, ale
-  zapisane nierówności nie przenoszą werdyktu H4 na poprawiony obraz;
-- pełny capture 60 minut zakończony FAIL przez panic recovery A2DP i późniejszy,
-  odrębny zmierzony brak dekodowanego PCM. Capture nie dowodzi, że oba faile są
-  przyczynowo niezależne; automatyczne napełnienie kolejek nie zmienia wyniku
-  próby na PASS.
+- smoke z dnia wydania na Core2 v1.0 właściciela i niezależna instalacja
+  z terenu na fabrycznie świeżym v1.1 — obie rewizje sprzętu pokryte,
+- wszystkie dziewięć logotypów stacji pobranych w jednym passie, pierwszy
+  dźwięk ≈1,2 s od sieci, zapamiętany głośnik wraca w ≈3,1 s, zero
+  underrunów na starcie,
+- bateria, pomiar właściciela: około 2,5 godziny typowego grania, przy
+  sprzyjających warunkach blisko trzech (pobór ~140 mA, w szczytach
+  ~190 mA; przyciemnienie ekranu zmienia niewiele),
+- Xiaomi Sound Pocket pozostaje referencyjnym głośnikiem Classic A2DP/SBC.
 
-Na poprawionym obrazie pozostają otwarte:
+Wcześniejsze zapisy laboratoryjne — w tym oblany przedwydaniowy bieg
+60 minut — są zachowane jako datowana historia w [STATUS.md](STATUS.md).
 
-- wymuszony fallback lokalny, recovery Wi-Fi i trzy cykle reconnect Bluetooth,
-- bezpieczeństwo pull-watchdog/fallback/reconnect A2DP, pełna kwalifikacja
-  przełączania dziewięciu stacji oraz endurance,
+Na linii wydania pozostają otwarte:
+
+- wymuszone cykle recovery (Wi-Fi, stream, głośnik) i długi soak endurance,
+  wraz z zachowaniem SD i powerbanku,
 - zgodność z kolejnymi głośnikami Bluetooth Classic A2DP/SBC,
-- PMU/bateria, SD i ciągłe granie przez 8 godzin,
-- usunięcie blokujących operacji sieciowych z pętli właściciela, uzasadniony
-  budżet DRAM i dopasowanie obudowy.
+- zapas DRAM podczas wybierania Bluetooth (dip ~5 KB pod obserwacją),
+- limit przeglądania i układ wyszukiwarki w portalu — zaplanowane na 0.2.2
+  ([docs/117](docs/117-0-2-2-maintenance-plan.pl.md)),
+- dopasowanie obudowy.
 
 Publiczny tor MP3-only jest torem wydanym: 0.2.1 odtwarza się bajt-w-bajt poza
 stemplem pochodzenia przy zachowaniu udokumentowanych parametrów builda

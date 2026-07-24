@@ -593,15 +593,15 @@
     },
     {
       "path": "docs/117-0-2-2-maintenance-plan.en.md",
-      "bytes": 7233,
+      "bytes": 7496,
       "mode": "0644",
-      "sha256": "d460652297b975ab740befb58a2b56afc489d984dbcf152d4a13f5381c28f94f"
+      "sha256": "b5450120ef235cad6ace76315b7766ddb712f2464c6aaf2f6d73097b4ed382fc"
     },
     {
       "path": "docs/117-0-2-2-maintenance-plan.pl.md",
-      "bytes": 7798,
+      "bytes": 8080,
       "mode": "0644",
-      "sha256": "30725e625f45fad2bf5f029b0b9284bec74405d3193046cfdf36c9a8010b74a3"
+      "sha256": "33025cbec10d0b682394fd6f570377ac3da03227de2cccb424628aea39d96e68"
     },
     {
       "path": "docs/12-product-philosophy.en.md",
@@ -1246,6 +1246,12 @@
       "sha256": "8f0121175ecc6087ec9ca5c3b4e6c87ecdea939d3fe9e594aafd113937aba830"
     },
     {
+      "path": "docs/README.md",
+      "bytes": 1534,
+      "mode": "0644",
+      "sha256": "10c9ec59b837fed73d7a47af22553b866ba136318d85ee7430f590039a41d0f3"
+    },
+    {
       "path": "firmware/adf-reference/README.md",
       "bytes": 862,
       "mode": "0644",
@@ -1775,9 +1781,9 @@
     },
     {
       "path": "package.json",
-      "bytes": 5715,
+      "bytes": 5810,
       "mode": "0644",
-      "sha256": "f1b7a1a92eb365a2cd182067eef01192aa07585e64a0f70b2eb4d892f7e1f5b9"
+      "sha256": "03cdc890dd5dc18a16278938931a3e1c97ec4cb355b45b623c4d2450ca175a84"
     },
     {
       "path": "persistence/checksum.mjs",
@@ -1817,15 +1823,21 @@
     },
     {
       "path": "README.md",
-      "bytes": 11075,
+      "bytes": 11081,
       "mode": "0644",
-      "sha256": "7cb31769910554480e2d66a0402b9872b844eb295f05efd0f3595b7a05a10e40"
+      "sha256": "f2d4852aec7101f8216b53e138f2a8de5b1cff16ff906b024411c47e9cff4dcd"
     },
     {
       "path": "README.pl.md",
-      "bytes": 11423,
+      "bytes": 11513,
       "mode": "0644",
-      "sha256": "e727a224d7ae8cb0888e3af6d8c8c5f6017e8e77247d6e3dd7f242837035da3f"
+      "sha256": "e456ba6afdd26917c772a5f765ef3c996d26ad39245b946ca1566bb444f25c1b"
+    },
+    {
+      "path": "release/claims.json",
+      "bytes": 360,
+      "mode": "0644",
+      "sha256": "1786b013d991f36ce1ea50d9a0b1238ed0e1bee2ed0bd8059a66c31fb43a9bcb"
     },
     {
       "path": "release/public-mirror-policy.json",
@@ -2096,6 +2108,12 @@
       "bytes": 1298,
       "mode": "0644",
       "sha256": "c2e45e61ac5793aaf7895d59a30945db53349fee68b67a29193e91ae0e4c7a41"
+    },
+    {
+      "path": "scripts/check-doc-currency.mjs",
+      "bytes": 3908,
+      "mode": "0644",
+      "sha256": "16cb6b2e4bf4ec2adbe77051e6dbba56cce082412b41c398276c8cebb13801f6"
     },
     {
       "path": "scripts/check-docs-parity.mjs",

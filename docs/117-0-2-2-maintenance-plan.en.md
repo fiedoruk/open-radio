@@ -124,6 +124,9 @@ surfaces beyond the A-items listed above is out of scope by default.
   measurement landed 2026-07-23: ~2.5–3 h at 140–190 mA), and a rehearsed rollback
   flash to 0.2.1.
 - **Phase 5 — publish:** separate owner GO; 0.2.1 remains served alongside.
+  Bump `release/claims.json` at the cut — the `check:doc-currency` gate then
+  fails every living doc still telling the old release's story until the
+  documentation sweep is complete.
 
 **Stop rule:** any regression signal on a sacred surface during Phase 4 stops
 the release; roll back to 0.2.1, root-cause with at most three fix attempts,
@@ -135,4 +138,5 @@ and only then retry the gate.
 green; two cold builds reproduce the release hash; every touched frozen file
 has its reviewed lock entry; the Phase-4 device matrix is recorded with both
 hardware revisions covered; release notes list every known limitation that
-remains; the rollback path to 0.2.1 is proven, not assumed.
+remains; `release/claims.json` is bumped and the `check:doc-currency` gate
+is green; the rollback path to 0.2.1 is proven, not assumed.

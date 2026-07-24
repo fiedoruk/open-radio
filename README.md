@@ -128,29 +128,30 @@ Available now:
 - reproducible firmware source, guarded exact-image restore and hardware
   evidence capture.
 
-Measured so far:
+Measured on the release line (0.2.1):
 
-- Xiaomi Sound Pocket Classic A2DP/SBC playback;
-- a focused 600-second RMF run on the corrected image with one real stream
-  restart, no injected Bluetooth silence and a clean owner-audible final window;
-- an earlier nine-station smoke in which every station recovered, with recorded
-  rough edges that do not transfer an H4 verdict to the corrected image;
-- a complete 60-minute evidence capture that failed on an A2DP recovery panic
-  and a later, distinct measured period with no decoded PCM. The capture does
-  not prove whether the two failures were causally independent; automatic
-  recovery eventually refilled both queues but does not convert the run into a
-  pass.
+- release-day smoke on the owner's Core2 v1.0 and an independent field
+  install on a factory-fresh v1.1 — both hardware revisions covered,
+- all nine station logos fetched in a single pass, first audio ≈1.2 s after
+  the network, the remembered speaker back in ≈3.1 s, zero underruns at
+  start,
+- battery, owner-measured: about 2.5 hours of typical playback, close to
+  three in favourable conditions (draw ~140 mA, ~190 mA at peaks; screen
+  dimming changes little),
+- Xiaomi Sound Pocket remains the Classic A2DP/SBC reference speaker.
 
-Still open on the corrected image:
+Earlier lab captures — including a failed pre-release 60-minute run — are
+preserved as dated history in [STATUS.md](STATUS.md).
 
-- forced local-speaker fallback, Wi-Fi recovery and three-cycle Bluetooth
-  reconnect,
-- A2DP pull-watchdog/fallback/reconnect safety, complete nine-station switching
-  and endurance qualification,
+Still open on the release line:
+
+- forced-recovery cycles (Wi-Fi, stream, speaker) and the long endurance
+  soak, with SD and power-bank behavior,
 - additional Classic Bluetooth A2DP/SBC speaker interoperability,
-- PMU/battery, SD and 8-hour playback endurance,
-- removal of blocking network work from the owner loop, a justified DRAM budget
-  and final enclosure fit.
+- DRAM headroom during Bluetooth dialing (a ~5 KB dip stays on watch),
+- the setup-portal browse cap and search placement — scheduled for 0.2.2
+  ([docs/117](docs/117-0-2-2-maintenance-plan.en.md)),
+- final enclosure fit.
 
 The public MP3-only lane is the released lane: 0.2.1 reproduces byte-for-byte
 outside its provenance stamp when the documented build parameters are honored

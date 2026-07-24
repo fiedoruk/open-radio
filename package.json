@@ -46,6 +46,7 @@
     "validate:community": "node scripts/validate-community-evidence.mjs",
     "replay:community": "node scripts/replay-community-trace.mjs",
     "check:docs-parity": "node scripts/check-docs-parity.mjs",
+    "check:doc-currency": "node scripts/check-doc-currency.mjs",
     "rehearse:rc1": "node scripts/rehearse-rc1-source.mjs --check",
     "rehearse:rc1:write": "node scripts/rehearse-rc1-source.mjs --write",
     "test:firmware:host": "make -C firmware/common test",
@@ -66,7 +67,7 @@
     "collect:firmware:s10": "node scripts/collect-s10-evidence.mjs",
     "rehearse:firmware:release": "node scripts/rehearse-firmware-release.mjs",
     "test": "node scripts/run-node-tests.mjs",
-    "check": "npm run validate:gui && npm run validate:ui && npm run validate:catalog && npm run validate:catalog-packs && npm run validate:persistence && npm run validate:network && npm run generate:resolver:check && npm run generate:persistence:check && npm run generate:network:check && npm run generate:firmware:check && npm run generate:firmware:services:check && npm run generate:runtime:check && npm run generate:ingress:check && npm run validate:community && npm run check:docs-parity && npm run check:public-mirror && npm run check:firmware:lock && npm run check:firmware:surface && npm run check:audio-surface && npm run check:hardware-readiness && npm run audit:overflow && npm run check:renderer && npm run check:ui-controller-parity && npm run test:firmware:host && npm test && npm run rehearse:rc1",
+    "check": "npm run validate:gui && npm run validate:ui && npm run validate:catalog && npm run validate:catalog-packs && npm run validate:persistence && npm run validate:network && npm run generate:resolver:check && npm run generate:persistence:check && npm run generate:network:check && npm run generate:firmware:check && npm run generate:firmware:services:check && npm run generate:runtime:check && npm run generate:ingress:check && npm run validate:community && npm run check:docs-parity && npm run check:doc-currency && npm run check:public-mirror && npm run check:firmware:lock && npm run check:firmware:surface && npm run check:audio-surface && npm run check:hardware-readiness && npm run audit:overflow && npm run check:renderer && npm run check:ui-controller-parity && npm run test:firmware:host && npm test && npm run rehearse:rc1",
     "check:public-mirror": "node scripts/check-public-mirror.mjs",
     "publish:mirror": "bash scripts/publish-public-mirror.sh"
   }
